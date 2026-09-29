@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jade Builds</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">JADE <span>League Classic builds</span></div>
+  <nav class="tabs">
+    <button data-tab="builds" class="tab active">Builds</button>
+    <button data-tab="test" class="tab">Test</button>
+  </nav>
+  <div id="status" class="status"><span class="dot"></span><span id="statusText">Connecting…</span></div>
+  <a class="patreon" href="https://www.patreon.com/c/LazyLoafs504" target="_blank" rel="noopener noreferrer" title="Support Jade development on Patreon">♥ Support on Patreon</a>
+</header>
+
+<main id="view-builds" class="view grid3">
+  <!-- Left: builds list -->
+  <section class="panel">
+    <h2>Builds</h2>
+    <div class="row">
+      <select id="champFilter" aria-label="Filter by champion"></select>
+    </div>
+    <button id="newBuild" class="btn primary wide">+ New build</button>
+    <ul id="buildList" class="buildlist"></ul>
+  </section>
+
+  <!-- Middle: editor -->
+  <section class="panel" id="editor">
+    <div id="editorEmpty" class="empty">Pick a build on the left or create a new one.</div>
+    <div id="editorBody" hidden>
+      <div class="row split">
+        <input id="buildName" class="input grow" placeholder="Build name" maxlength="80">
+        <img id="champIcon" class="champ" alt="">
+        <select id="buildChamp" aria-label="Champion"></select>
+      </div>
+      <h3>Item order <small>(top = buy first · drag to reorder)</small></h3>
+      <ol id="steps" class="steps"></ol>
+      <div id="stepsEmpty" class="empty small">Click items on the right to add them.</div>
+      <div class="foot">
+        <div>Total: <b id="totalCost">0</b> gold · <span id="stepCount">0</span> items</div>
+        <div class="row">
+          <button id="useBuild" class="btn primary">Use in overlay</button>
+          <button id="deleteBuild" class="btn danger">Delete</button>
+          <span id="saveState" class="savestate"></span>
+        </div>
+      </div>
+      <textarea id="buildNotes" class="input notes" rows="3" placeholder="Notes (optional)"></textarea>
+    </div>
+  </section>
+
+  <!-- Right: item catalog -->
+  <section class="panel">
+    <h2>Items</h2>
+    <input id="search" class="input" placeholder="Search items…" autocomplete="off">
+    <div id="chips" class="chips"></div>
+    <div id="grid" class="itemgrid"></div>
+  </section>
+</main>
+
+<main id="view-test" class="view" hidden>
+  <section class="panel test">
+    <h2>Simulated game</h2>
+    <p class="hint">Fake a match to see how the overlay reacts. This replaces the real game feed while switched on.</p>
+    <label class="check"><input type="checkbox" id="mockEnabled"> Use simulated game</label>
+    <div class="fields">
+      <label>Champion <select id="mockChamp"></select></label>
+      <label>Gold <input id="mockGold" type="number" min="0" max="99999" step="25" class="input num"></label>
+      <input id="mockGoldRange" type="range" min="0" max="6000" step="25">
+      <label>Game time (s) <input id="mockTime" type="number" min="0" step="10" class="input num"></label>
+      <label class="check"><input type="checkbox" id="mockDead"> Player is dead</label>
+    </div>
+    <h3>Inventory</h3>
+    <div class="row">
+      <input id="mockItemSearch" class="input grow" list="itemNames" placeholder="Add an item you own…">
+      <button id="mockAdd" class="btn">Add</button>
+    </div>
+    <datalist id="itemNames"></datalist>
+    <div id="mockInv" class="invchips"></div>
+    <h3>Engine says</h3>
+    <pre id="mockReadout" class="readout"></pre>
+  </section>
+  <section class="panel previewpanel">
+    <h2>Overlay preview</h2>
+    <p class="hint">The strip as it will sit on the left edge of the game screen.</p>
+    <div class="scene"><iframe id="previewFrame" src="/overlay/?embed=1" title="Overlay preview"></iframe></div>
+  </section>
+</main>
+
+<div id="tip" class="tip" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

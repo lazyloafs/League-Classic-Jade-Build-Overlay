@@ -1,0 +1,39 @@
+{
+  "name": "jade-overlay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jade - League Classic (JADE) item build editor and in-game next-item overlay with gold-needed tracking",
+  "keywords": [
+    "league-of-legends",
+    "league-classic",
+    "jade",
+    "item-build",
+    "build-editor",
+    "overlay",
+    "electron",
+    "live-client-data-api",
+    "lol",
+    "gold-tracker"
+  ],
+  "homepage": "https://github.com/lazyloafs/League-Classic-Jade-Build-Overlay#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazyloafs/League-Classic-Jade-Build-Overlay.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lazyloafs/League-Classic-Jade-Build-Overlay/issues"
+  },
+  "main": "overlay/main.js",
+  "scripts": {
+    "start": "electron .",
+    "web": "node server/index.js",
+    "mock": "node server/index.js --mock",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^4.22.3"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0"
+  }
+}

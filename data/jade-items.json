@@ -1,0 +1,3813 @@
+{
+ "source": {
+  "items": "Data Dragon 16.19.1 (77xxxx IDs) filtered by CDragon jade-items.json",
+  "champions": "CDragon jade-champions.json + champion-summary.json"
+ },
+ "version": "16.19.1",
+ "items": [
+  {
+   "id": 771001,
+   "name": "Boots of Speed",
+   "cost": 325,
+   "base": 325,
+   "sell": 228,
+   "purchasable": true,
+   "into": [
+    773020,
+    773117,
+    773111,
+    773006,
+    773009,
+    773047,
+    773158
+   ],
+   "tags": [
+    "Boots"
+   ],
+   "stats": {},
+   "description": "Limited to 1. Enhanced Movement: 25 Move Speed",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771001.png",
+   "recipe": []
+  },
+  {
+   "id": 771004,
+   "name": "Faerie Charm",
+   "cost": 180,
+   "base": 180,
+   "sell": 126,
+   "purchasable": true,
+   "into": [
+    773070,
+    773504,
+    773037,
+    771080,
+    773028,
+    773096,
+    773165
+   ],
+   "tags": [
+    "ManaRegen"
+   ],
+   "stats": {},
+   "description": "3 Mana Regen per 5 seconds",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771004.png",
+   "recipe": []
+  },
+  {
+   "id": 771006,
+   "name": "Rejuvenation Bead",
+   "cost": 180,
+   "base": 180,
+   "sell": 126,
+   "purchasable": true,
+   "into": [
+    771080,
+    773052,
+    773064,
+    773077,
+    773083,
+    773096,
+    773512
+   ],
+   "tags": [
+    "HealthRegen"
+   ],
+   "stats": {
+    "FlatHPRegenMod": 1
+   },
+   "description": "5 Health Regen per 5 seconds",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771006.png",
+   "recipe": []
+  },
+  {
+   "id": 771011,
+   "name": "Giant's Belt",
+   "cost": 1000,
+   "base": 1000,
+   "sell": 700,
+   "purchasable": true,
+   "into": [
+    773116,
+    773022,
+    773068,
+    773073,
+    773083
+   ],
+   "tags": [
+    "Health"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 380
+   },
+   "description": "380 Health",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771011.png",
+   "recipe": []
+  },
+  {
+   "id": 771018,
+   "name": "Cloak of Agility",
+   "cost": 730,
+   "base": 730,
+   "sell": 511,
+   "purchasable": true,
+   "into": [
+    773162,
+    773046,
+    773031
+   ],
+   "tags": [
+    "CriticalStrike"
+   ],
+   "stats": {
+    "FlatCritChanceMod": 0.15
+   },
+   "description": "15% Critical Strike Chance",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771018.png",
+   "recipe": []
+  },
+  {
+   "id": 771026,
+   "name": "Blasting Wand",
+   "cost": 860,
+   "base": 860,
+   "sell": 602,
+   "purchasable": true,
+   "into": [
+    773056,
+    773124,
+    773027,
+    773003,
+    773116,
+    773001,
+    773089,
+    773100,
+    773135
+   ],
+   "tags": [
+    "SpellDamage"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 40
+   },
+   "description": "40 Ability Power",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771026.png",
+   "recipe": []
+  },
+  {
+   "id": 771027,
+   "name": "Sapphire Crystal",
+   "cost": 400,
+   "base": 400,
+   "sell": 280,
+   "purchasable": true,
+   "into": [
+    773010,
+    773070,
+    773057,
+    773024
+   ],
+   "tags": [
+    "Mana"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 200
+   },
+   "description": "200 Mana \"Some say that Sapphire was the original source of classical magic.\"",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771027.png",
+   "recipe": []
+  },
+  {
+   "id": 771028,
+   "name": "Ruby Crystal",
+   "cost": 475,
+   "base": 475,
+   "sell": 333,
+   "purchasable": true,
+   "into": [
+    773056,
+    773010,
+    773132,
+    773178,
+    773067,
+    773102,
+    773071,
+    772049,
+    773022,
+    773044,
+    773063,
+    773136,
+    773138,
+    773211
+   ],
+   "tags": [
+    "Health"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 180
+   },
+   "description": "180 Health",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771028.png",
+   "recipe": []
+  },
+  {
+   "id": 771029,
+   "name": "Cloth Armor",
+   "cost": 300,
+   "base": 300,
+   "sell": 210,
+   "purchasable": true,
+   "into": [
+    773082,
+    773191,
+    773052,
+    773143,
+    773047,
+    773075,
+    773105,
+    773106
+   ],
+   "tags": [
+    "Armor"
+   ],
+   "stats": {
+    "FlatArmorMod": 15
+   },
+   "description": "15 Armor",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771029.png",
+   "recipe": []
+  },
+  {
+   "id": 771031,
+   "name": "Chain Vest",
+   "cost": 720,
+   "base": 720,
+   "sell": 504,
+   "purchasable": true,
+   "into": [
+    773026,
+    773005,
+    773024,
+    773068,
+    773073,
+    773075,
+    773512
+   ],
+   "tags": [
+    "Armor"
+   ],
+   "stats": {
+    "FlatArmorMod": 40
+   },
+   "description": "40 Armor",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771031.png",
+   "recipe": []
+  },
+  {
+   "id": 771033,
+   "name": "Null-Magic Mantle",
+   "cost": 400,
+   "base": 400,
+   "sell": 280,
+   "purchasable": true,
+   "into": [
+    773111,
+    773064,
+    773023,
+    773028,
+    773091,
+    773105,
+    773107,
+    773155
+   ],
+   "tags": [
+    "SpellBlock"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 20
+   },
+   "description": "20 Magic Resist",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771033.png",
+   "recipe": []
+  },
+  {
+   "id": 771036,
+   "name": "Long Sword",
+   "cost": 400,
+   "base": 400,
+   "sell": 280,
+   "purchasable": true,
+   "into": [
+    773209,
+    773123,
+    773134,
+    773144,
+    771053,
+    773004,
+    773035,
+    773044,
+    773077,
+    773141,
+    773155
+   ],
+   "tags": [
+    "Damage"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 10
+   },
+   "description": "10 Attack Damage",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771036.png",
+   "recipe": []
+  },
+  {
+   "id": 771037,
+   "name": "Pickaxe",
+   "cost": 875,
+   "base": 875,
+   "sell": 613,
+   "purchasable": true,
+   "into": [
+    773124,
+    773172,
+    773031,
+    773022,
+    773035,
+    773077,
+    773109,
+    773156
+   ],
+   "tags": [
+    "Damage"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 25
+   },
+   "description": "25 Attack Damage",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771037.png",
+   "recipe": []
+  },
+  {
+   "id": 771038,
+   "name": "B. F. Sword",
+   "cost": 1550,
+   "base": 1550,
+   "sell": 1085,
+   "purchasable": true,
+   "into": [
+    773031,
+    773072,
+    773139
+   ],
+   "tags": [
+    "Damage"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 45
+   },
+   "description": "45 Attack Damage",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771038.png",
+   "recipe": []
+  },
+  {
+   "id": 771039,
+   "name": "Hunter's Machete",
+   "cost": 300,
+   "base": 300,
+   "sell": 120,
+   "purchasable": true,
+   "into": [
+    771080,
+    773106
+   ],
+   "tags": [
+    "Damage",
+    "OnHit"
+   ],
+   "stats": {},
+   "description": "Passive: Basic Attacks deal 10 magic damage to monsters On-Hit. Butcher: Damage dealt to monsters increased by 10%.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771039.png",
+   "recipe": []
+  },
+  {
+   "id": 771042,
+   "name": "Dagger",
+   "cost": 400,
+   "base": 400,
+   "sell": 280,
+   "purchasable": true,
+   "into": [
+    773114,
+    773162,
+    773153,
+    773046,
+    773131,
+    773006,
+    773085,
+    773086,
+    773101
+   ],
+   "tags": [
+    "AttackSpeed"
+   ],
+   "stats": {
+    "PercentAttackSpeedMod": 0.12
+   },
+   "description": "12% Attack Speed",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771042.png",
+   "recipe": []
+  },
+  {
+   "id": 771043,
+   "name": "Recurve Bow",
+   "cost": 900,
+   "base": 900,
+   "sell": 630,
+   "purchasable": true,
+   "into": [
+    773154,
+    773178,
+    773131,
+    773085,
+    773091,
+    773109
+   ],
+   "tags": [
+    "AttackSpeed"
+   ],
+   "stats": {
+    "PercentAttackSpeedMod": 0.3
+   },
+   "description": "30% Attack Speed",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771043.png",
+   "recipe": []
+  },
+  {
+   "id": 771051,
+   "name": "Brawler's Gloves",
+   "cost": 400,
+   "base": 400,
+   "sell": 280,
+   "purchasable": true,
+   "into": [
+    773093,
+    773086
+   ],
+   "tags": [
+    "CriticalStrike"
+   ],
+   "stats": {
+    "FlatCritChanceMod": 0.08
+   },
+   "description": "8% Critical Strike Chance",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771051.png",
+   "recipe": []
+  },
+  {
+   "id": 771052,
+   "name": "Amplifying Tome",
+   "cost": 435,
+   "base": 435,
+   "sell": 305,
+   "purchasable": true,
+   "into": [
+    773114,
+    773191,
+    773116,
+    773057,
+    773041,
+    773098,
+    773108,
+    773135,
+    773136,
+    773145,
+    773151
+   ],
+   "tags": [
+    "SpellDamage"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 20
+   },
+   "description": "20 Ability Power",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771052.png",
+   "recipe": []
+  },
+  {
+   "id": 771053,
+   "name": "Vampiric Scepter",
+   "cost": 800,
+   "base": 400,
+   "sell": 560,
+   "purchasable": true,
+   "into": [
+    773074,
+    773144,
+    773072,
+    773050
+   ],
+   "tags": [
+    "Damage",
+    "LifeSteal"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 10,
+    "PercentLifeStealMod": 0.1
+   },
+   "description": "10 Attack Damage 10% Life Steal",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771053.png",
+   "recipe": [
+    771036
+   ],
+   "combineCost": 400
+  },
+  {
+   "id": 771054,
+   "name": "Doran's Shield",
+   "cost": 440,
+   "base": 440,
+   "sell": 176,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "HealthRegen"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 100,
+    "FlatHPRegenMod": 2
+   },
+   "description": "100 Health 10 Health Regen per 5 seconds Shieldwall: Blocks 8 damage from champion Basic Attacks.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771054.png",
+   "recipe": []
+  },
+  {
+   "id": 771055,
+   "name": "Doran's Blade",
+   "cost": 475,
+   "base": 475,
+   "sell": 190,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Damage",
+    "LifeSteal",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 80,
+    "FlatPhysicalDamageMod": 10
+   },
+   "description": "80 Health 10 Attack Damage Passive: Basic Attacks restore 5 Health On-Hit.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771055.png",
+   "recipe": []
+  },
+  {
+   "id": 771056,
+   "name": "Doran's Ring",
+   "cost": 400,
+   "base": 400,
+   "sell": 160,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "SpellDamage",
+    "ManaRegen"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 60,
+    "FlatMagicDamageMod": 15
+   },
+   "description": "60 Health 15 Ability Power 3 Mana Regen per 5 seconds Passive: Restores 4 Mana upon killing a unit.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771056.png",
+   "recipe": []
+  },
+  {
+   "id": 771057,
+   "name": "Negatron Cloak",
+   "cost": 720,
+   "base": 720,
+   "sell": 504,
+   "purchasable": true,
+   "into": [
+    773161,
+    773140,
+    773064,
+    773026,
+    773001,
+    773211,
+    773512
+   ],
+   "tags": [
+    "SpellBlock"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 40
+   },
+   "description": "40 Magic Resist",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771057.png",
+   "recipe": []
+  },
+  {
+   "id": 771058,
+   "name": "Needlessly Large Rod",
+   "cost": 1600,
+   "base": 1600,
+   "sell": 1120,
+   "purchasable": true,
+   "into": [
+    773128,
+    773089,
+    773157
+   ],
+   "tags": [
+    "SpellDamage"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 80
+   },
+   "description": "80 Ability Power",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771058.png",
+   "recipe": []
+  },
+  {
+   "id": 771080,
+   "name": "Spirit Stone",
+   "cost": 700,
+   "base": 40,
+   "sell": 490,
+   "purchasable": true,
+   "into": [
+    773209,
+    773206,
+    773207
+   ],
+   "tags": [
+    "HealthRegen",
+    "ManaRegen",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatHPRegenMod": 2.8
+   },
+   "description": "14 Health Regen per 5 seconds 7 Mana Regen per 5 seconds Passive: Basic Attacks deal 10 magic damage to monsters On-Hit. Butcher: Damage dealt to monsters increased by 20%.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/771080.png",
+   "recipe": [
+    771039,
+    771006,
+    771004
+   ],
+   "combineCost": 40
+  },
+  {
+   "id": 772003,
+   "name": "Health Potion",
+   "cost": 35,
+   "base": 35,
+   "sell": 14,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "HealthRegen",
+    "Consumable",
+    "Lane",
+    "Jungle"
+   ],
+   "stats": {},
+   "description": "Click to Consume: Restores 150 Health over 15 seconds. Limited to 5 at one time.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772003.png",
+   "recipe": []
+  },
+  {
+   "id": 772004,
+   "name": "Mana Potion",
+   "cost": 35,
+   "base": 35,
+   "sell": 14,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Consumable"
+   ],
+   "stats": {},
+   "description": "Click to Consume: Restores 100 Mana over 15 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772004.png",
+   "recipe": []
+  },
+  {
+   "id": 772009,
+   "name": "Total Biscuit of Rejuvenation",
+   "cost": 35,
+   "base": 35,
+   "sell": 2,
+   "purchasable": false,
+   "into": [],
+   "tags": [
+    "Consumable"
+   ],
+   "stats": {},
+   "description": "Click to Consume: Restores 80 Health and 50 Mana over 10 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772009.png",
+   "recipe": []
+  },
+  {
+   "id": 772037,
+   "name": "Elixir of Fortitude",
+   "cost": 350,
+   "base": 350,
+   "sell": 140,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Damage",
+    "Consumable"
+   ],
+   "stats": {},
+   "description": "Click to Consume: Grants Health and 15 Attack Damage for 180 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772037.png",
+   "recipe": []
+  },
+  {
+   "id": 772038,
+   "name": "Elixir of Agility",
+   "cost": 250,
+   "base": 250,
+   "sell": 100,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "CriticalStrike",
+    "AttackSpeed",
+    "Consumable"
+   ],
+   "stats": {},
+   "description": "Click to Consume: Grants Attack Speed and 15% Critical Strike Chance for 180 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772038.png",
+   "recipe": []
+  },
+  {
+   "id": 772039,
+   "name": "Elixir of Brilliance",
+   "cost": 250,
+   "base": 250,
+   "sell": 100,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellDamage",
+    "Consumable",
+    "CooldownReduction"
+   ],
+   "stats": {},
+   "description": "Click to Consume: Grants Ability Power and 10% Cooldown Reduction for 180 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772039.png",
+   "recipe": []
+  },
+  {
+   "id": 772041,
+   "name": "Crystalline Flask",
+   "cost": 345,
+   "base": 345,
+   "sell": 138,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "HealthRegen",
+    "ManaRegen",
+    "Consumable",
+    "Lane",
+    "Jungle"
+   ],
+   "stats": {},
+   "description": "Replenishment: Holds 3 charges and refills upon visiting the shop. Active Consumes a charge to restore 120 Health and 60 Mana over 12 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772041.png",
+   "recipe": []
+  },
+  {
+   "id": 772042,
+   "name": "Oracle's Elixir",
+   "cost": 400,
+   "base": 400,
+   "sell": 160,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Consumable",
+    "Vision",
+    "Stealth"
+   ],
+   "stats": {},
+   "description": "Click to Consume: Grants detection of nearby invisible units for up to 4 minutes. Revealing a ward in this manner grants a portion of the gold reward for killing that unit.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772042.png",
+   "recipe": []
+  },
+  {
+   "id": 772043,
+   "name": "Vision Ward",
+   "cost": 125,
+   "base": 125,
+   "sell": 50,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Consumable",
+    "Vision",
+    "Stealth"
+   ],
+   "stats": {},
+   "description": "Click to Consume: Places an invisible ward that reveals the surrounding area and invisible units in the area for 3 minutes. Revealing a ward in this manner grants a portion of the gold reward when that unit is killed.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772043.png",
+   "recipe": []
+  },
+  {
+   "id": 772044,
+   "name": "Sight Ward",
+   "cost": 75,
+   "base": 75,
+   "sell": 30,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Consumable",
+    "Vision"
+   ],
+   "stats": {},
+   "description": "Click to Consume: Places an invisible ward that reveals the surrounding area for 3 minutes.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772044.png",
+   "recipe": []
+  },
+  {
+   "id": 772045,
+   "name": "Ruby Sightstone",
+   "cost": 1700,
+   "base": 75,
+   "sell": 680,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Consumable",
+    "Vision"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 380
+   },
+   "description": "380 Health Ward Refresh: Holds 5 charges and refills upon visiting the shop. Active Consumes a charge to place an invisible ward that reveals the surrounding area for 3 minutes (maximum 3 wards placed from this item at once).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772045.png",
+   "recipe": [
+    772049,
+    773132
+   ],
+   "combineCost": 75
+  },
+  {
+   "id": 772049,
+   "name": "Sightstone",
+   "cost": 800,
+   "base": 325,
+   "sell": 320,
+   "purchasable": true,
+   "into": [
+    772045
+   ],
+   "tags": [
+    "Health",
+    "Consumable",
+    "Vision"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 180
+   },
+   "description": "180 Health Ward Refresh: Holds 3 charges and refills upon visiting the shop. Active Consumes a charge to place an invisible ward that reveals the surrounding area for 3 minutes (maximum 2 wards placed from this item at once).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772049.png",
+   "recipe": [
+    771028
+   ],
+   "combineCost": 325
+  },
+  {
+   "id": 772050,
+   "name": "Explorer's Ward",
+   "cost": 75,
+   "base": 75,
+   "sell": 4,
+   "purchasable": false,
+   "into": [],
+   "tags": [
+    "Consumable",
+    "Vision"
+   ],
+   "stats": {},
+   "description": "Click to Consume: Places an invisible ward that reveals the surrounding area for 3 minutes.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772050.png",
+   "recipe": []
+  },
+  {
+   "id": 773001,
+   "name": "Abyssal Scepter",
+   "cost": 2560,
+   "base": 980,
+   "sell": 1792,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "SpellDamage",
+    "Aura"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 45,
+    "FlatMagicDamageMod": 70
+   },
+   "description": "70 Ability Power 45 Magic Resist Aura - Despair: Reduces the Magic Resist of nearby enemies by 20",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773001.png",
+   "recipe": [
+    771026,
+    771057
+   ],
+   "combineCost": 980
+  },
+  {
+   "id": 773003,
+   "name": "Archangel's Staff",
+   "cost": 2700,
+   "base": 1140,
+   "sell": 1890,
+   "purchasable": true,
+   "into": [
+    773040
+   ],
+   "tags": [
+    "SpellDamage",
+    "Mana",
+    "ManaRegen"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 250,
+    "FlatMagicDamageMod": 60
+   },
+   "description": "250 Mana 60 Ability Power 10 Mana Regen per 5 seconds Insight: Grants Ability Power equal to 3% of maximum Mana . Mana Charge: Grants +8 maximum Mana (max 750 Mana ) for each spell cast and Mana expenditure (occurs up to 2 times every 4 seconds). Transforms into Seraph's Embrace at +750 Mana.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773003.png",
+   "recipe": [
+    773070,
+    771026
+   ],
+   "combineCost": 1140
+  },
+  {
+   "id": 773004,
+   "name": "Manamune",
+   "cost": 2100,
+   "base": 1000,
+   "sell": 1470,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage",
+    "Mana",
+    "ManaRegen",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 250,
+    "FlatPhysicalDamageMod": 20
+   },
+   "description": "250 Mana 20 Attack Damage 7 Mana Regen per 5 seconds Awe: Grants bonus Attack Damage equal to 2% of maximum Mana. Mana Charge: Grants 4 maximum Mana (max 750 Mana) for each Basic Attack, spell cast, and Mana expenditure (occurs up to 2 times every 8 seconds). Transforms into Muramana at 750 Mana .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773004.png",
+   "recipe": [
+    773070,
+    771036
+   ],
+   "combineCost": 1000
+  },
+  {
+   "id": 773005,
+   "name": "Atma's Impaler",
+   "cost": 2300,
+   "base": 780,
+   "sell": 1610,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Armor",
+    "Damage",
+    "CriticalStrike"
+   ],
+   "stats": {
+    "FlatArmorMod": 45,
+    "FlatCritChanceMod": 0.15
+   },
+   "description": "45 Armor 15% Critical Strike Chance Impact: Grants bonus Attack Damage equal to 1.5% of Maximum Health .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773005.png",
+   "recipe": [
+    771031,
+    773093
+   ],
+   "combineCost": 780
+  },
+  {
+   "id": 773006,
+   "name": "Berserker's Greaves",
+   "cost": 900,
+   "base": 175,
+   "sell": 630,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "AttackSpeed",
+    "Boots"
+   ],
+   "stats": {
+    "PercentAttackSpeedMod": 0.2
+   },
+   "description": "20% Attack Speed Enhanced Movement: 45 Move Speed",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773006.png",
+   "recipe": [
+    771001,
+    771042
+   ],
+   "combineCost": 175
+  },
+  {
+   "id": 773009,
+   "name": "Boots of Swiftness",
+   "cost": 1000,
+   "base": 675,
+   "sell": 700,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Boots"
+   ],
+   "stats": {},
+   "description": "Enhanced Movement: 60 Move Speed Slow Resist: Movement slowing effects are reduced by 25% .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773009.png",
+   "recipe": [
+    771001
+   ],
+   "combineCost": 675
+  },
+  {
+   "id": 773010,
+   "name": "Catalyst the Protector",
+   "cost": 1200,
+   "base": 325,
+   "sell": 840,
+   "purchasable": true,
+   "into": [
+    773027,
+    773084
+   ],
+   "tags": [
+    "Health",
+    "Mana"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 300,
+    "FlatHPPoolMod": 200
+   },
+   "description": "200 Health 300 Mana Contemplation: Upon leveling up, restores 150 Health and 200 Mana over 8 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773010.png",
+   "recipe": [
+    771028,
+    771027
+   ],
+   "combineCost": 325
+  },
+  {
+   "id": 773020,
+   "name": "Sorcerer's Shoes",
+   "cost": 1100,
+   "base": 775,
+   "sell": 770,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Boots",
+    "MagicPenetration"
+   ],
+   "stats": {},
+   "description": "15 Magic Penetration Enhanced Movement: 45 Move Speed",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773020.png",
+   "recipe": [
+    771001
+   ],
+   "combineCost": 775
+  },
+  {
+   "id": 773022,
+   "name": "Frozen Mallet",
+   "cost": 3300,
+   "base": 950,
+   "sell": 2310,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Damage",
+    "OnHit",
+    "Slow"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 700,
+    "FlatPhysicalDamageMod": 30
+   },
+   "description": "700 Health 30 Attack Damage Icy: Basic Attacks Slow the target's Move Speed for 1.5 seconds On-Hit (40% Slow for Melee Attacks, 30% Slow for Ranged Attacks). \"We brought it back just for you.\"",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773022.png",
+   "recipe": [
+    771028,
+    771011,
+    771037
+   ],
+   "combineCost": 950
+  },
+  {
+   "id": 773023,
+   "name": "Twin Shadows",
+   "cost": 1900,
+   "base": 735,
+   "sell": 1330,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "SpellDamage",
+    "NonbootsMovement",
+    "Slow"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 40,
+    "FlatMagicDamageMod": 40,
+    "PercentMovementSpeedMod": 0.06
+   },
+   "description": "40 Ability Power 40 Magic Resist 6% Move Speed Active 120s Summons up to 2 invulnerable ghosts that seek out the two nearest enemy champions for 6 seconds. If a ghost reaches its target, it reveals the target and Slows their Move Speed by 40% for 2.5 seconds (120 second cooldown).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773023.png",
+   "recipe": [
+    773098,
+    771033
+   ],
+   "combineCost": 735
+  },
+  {
+   "id": 773024,
+   "name": "Glacial Shroud",
+   "cost": 1350,
+   "base": 230,
+   "sell": 945,
+   "purchasable": true,
+   "into": [
+    773025,
+    773110
+   ],
+   "tags": [
+    "Armor",
+    "Mana",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 300,
+    "FlatArmorMod": 45
+   },
+   "description": "45 Armor 300 Mana Coolheaded: 10% Cooldown Reduction",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773024.png",
+   "recipe": [
+    771031,
+    771027
+   ],
+   "combineCost": 230
+  },
+  {
+   "id": 773025,
+   "name": "Iceborn Gauntlet",
+   "cost": 3250,
+   "base": 700,
+   "sell": 2275,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Armor",
+    "SpellDamage",
+    "Mana",
+    "CooldownReduction",
+    "Slow"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 500,
+    "FlatMagicDamageMod": 30,
+    "FlatArmorMod": 70
+   },
+   "description": "30 Ability Power 500 Mana 70 Armor 10% Cooldown Reduction Spellblade of True Ice: After using an ability, the next Basic Attack (On-Hit) deals bonus physical damage equal to 125% of base Attack Damage to enemies near the target, and creates a field around the target for 2 seconds that Slows enemy Move Speed by 30% (2 second cooldown, half-sized field if ranged).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773025.png",
+   "recipe": [
+    773057,
+    773024
+   ],
+   "combineCost": 700
+  },
+  {
+   "id": 773026,
+   "name": "Guardian Angel",
+   "cost": 2750,
+   "base": 1310,
+   "sell": 1100,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "Armor"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 40,
+    "FlatArmorMod": 50
+   },
+   "description": "50 Armor 40 Magic Resist Guardian's Intervention: Upon taking lethal damage, restores 30% of maximum Health and Mana after 4 seconds of stasis (5 minute cooldown).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773026.png",
+   "recipe": [
+    771057,
+    771031
+   ],
+   "combineCost": 1310
+  },
+  {
+   "id": 773027,
+   "name": "Rod of Ages",
+   "cost": 2800,
+   "base": 740,
+   "sell": 1960,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "SpellDamage",
+    "Mana"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 450,
+    "FlatHPPoolMod": 450,
+    "FlatMagicDamageMod": 60
+   },
+   "description": "450 Health 450 Mana 60 Ability Power Wisdom of Ages: Grants 20 Health , 20 Mana , and 2 Ability Power per stack (max 200 Health , 200 Mana , and 20 Ability Power ). Grants 1 stack per minute (max 10 stacks). Contemplation: Upon leveling up, restores 150 Health and 200 Mana over 8 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773027.png",
+   "recipe": [
+    773010,
+    771026
+   ],
+   "combineCost": 740
+  },
+  {
+   "id": 773028,
+   "name": "Chalice of Harmony",
+   "cost": 880,
+   "base": 120,
+   "sell": 616,
+   "purchasable": true,
+   "into": [
+    773174,
+    773222
+   ],
+   "tags": [
+    "SpellBlock",
+    "ManaRegen"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 25
+   },
+   "description": "25 Magic Resist 7 Mana Regen per 5 seconds Mana Font: Increases Mana Regen by 1% per 1% of missing Mana .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773028.png",
+   "recipe": [
+    771004,
+    771033,
+    771004
+   ],
+   "combineCost": 120
+  },
+  {
+   "id": 773031,
+   "name": "Infinity Edge",
+   "cost": 3800,
+   "base": 645,
+   "sell": 2660,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage",
+    "CriticalStrike"
+   ],
+   "stats": {
+    "FlatCritChanceMod": 0.25,
+    "FlatPhysicalDamageMod": 70
+   },
+   "description": "70 Attack Damage 25% Critical Strike Chance Infinite Precision: Critical strikes deal 250% damage instead of 200%.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773031.png",
+   "recipe": [
+    771038,
+    771037,
+    771018
+   ],
+   "combineCost": 645
+  },
+  {
+   "id": 773035,
+   "name": "Last Whisper",
+   "cost": 2300,
+   "base": 1025,
+   "sell": 1610,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage",
+    "ArmorPenetration"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 40
+   },
+   "description": "40 Attack Damage Piercing Volley: You ignore 35% of your opponent's Armor .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773035.png",
+   "recipe": [
+    771036,
+    771037
+   ],
+   "combineCost": 1025
+  },
+  {
+   "id": 773037,
+   "name": "Mana Manipulator",
+   "cost": 300,
+   "base": 120,
+   "sell": 210,
+   "purchasable": true,
+   "into": [
+    773063,
+    773092
+   ],
+   "tags": [
+    "ManaRegen",
+    "Aura"
+   ],
+   "stats": {},
+   "description": "Aura - Mana Warp: Grants nearby allied champions 5 Mana Regen per 5 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773037.png",
+   "recipe": [
+    771004
+   ],
+   "combineCost": 120
+  },
+  {
+   "id": 773040,
+   "name": "Seraph's Embrace",
+   "cost": 2700,
+   "base": 2700,
+   "sell": 1890,
+   "purchasable": false,
+   "into": [],
+   "tags": [],
+   "stats": {
+    "FlatMPPoolMod": 1000,
+    "FlatMagicDamageMod": 60
+   },
+   "description": "1000 Mana 60 Ability Power 10 Mana Regen per 5 seconds Insight: Grants Ability Power equal to 3% of maximum Mana . Active 120s Consumes 20 % of current Mana to grant a Shield for 3 seconds that absorbs damage equal to 150 plus the amount of Mana consumed (120 second cooldown).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773040.png",
+   "recipe": []
+  },
+  {
+   "id": 773041,
+   "name": "Mejai's Soulstealer",
+   "cost": 1235,
+   "base": 800,
+   "sell": 865,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellDamage"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 20
+   },
+   "description": "20 Ability Power Soul Capture: Grants 8 Ability Power per stack. Grants 2 stacks for a kill or 1 stack for an assist (max 20 stacks). A third of the stacks are lost upon death. At 20 stacks, grants 15% Cooldown Reduction.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773041.png",
+   "recipe": [
+    771052
+   ],
+   "combineCost": 800
+  },
+  {
+   "id": 773042,
+   "name": "Muramana",
+   "cost": 2100,
+   "base": 2100,
+   "sell": 1470,
+   "purchasable": false,
+   "into": [],
+   "tags": [
+    "OnHit"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 1000,
+    "FlatPhysicalDamageMod": 20
+   },
+   "description": "20 Attack Damage 1000 Mana 7 Mana Regen per 5 seconds Awe: Grants bonus Attack Damage equal to 2% of maximum Mana. UNIQUE Toggle: Single target Spells and Attacks (On-Hit) consume 3% of current Mana to deal bonus physical damage equal to twice the amount of Mana consumed.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773042.png",
+   "recipe": []
+  },
+  {
+   "id": 773044,
+   "name": "Phage",
+   "cost": 1250,
+   "base": 375,
+   "sell": 875,
+   "purchasable": true,
+   "into": [
+    773078
+   ],
+   "tags": [
+    "Health",
+    "Damage",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 200,
+    "FlatPhysicalDamageMod": 20
+   },
+   "description": "200 Health 20 Attack Damage Rage: Basic Attacks grant 20 Move Speed for 2 seconds On-Hit. Kills grant 60 Move Speed for 2 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773044.png",
+   "recipe": [
+    771028,
+    771036
+   ],
+   "combineCost": 375
+  },
+  {
+   "id": 773046,
+   "name": "Phantom Dancer",
+   "cost": 2800,
+   "base": 495,
+   "sell": 1960,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "CriticalStrike",
+    "AttackSpeed",
+    "NonbootsMovement"
+   ],
+   "stats": {
+    "FlatCritChanceMod": 0.3,
+    "PercentAttackSpeedMod": 0.5,
+    "PercentMovementSpeedMod": 0.05
+   },
+   "description": "50% Attack Speed 30% Critical Strike Chance 5% Move Speed Ghostly Waltz: Champion can move through units.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773046.png",
+   "recipe": [
+    771018,
+    773086,
+    771042
+   ],
+   "combineCost": 495
+  },
+  {
+   "id": 773047,
+   "name": "Ninja Tabi",
+   "cost": 1000,
+   "base": 375,
+   "sell": 700,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Armor",
+    "Boots"
+   ],
+   "stats": {
+    "FlatArmorMod": 25
+   },
+   "description": "25 Armor Ninja Footwork: Blocks 10% of the damage from Basic Attacks. Enhanced Movement: 45 Move Speed",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773047.png",
+   "recipe": [
+    771001,
+    771029
+   ],
+   "combineCost": 375
+  },
+  {
+   "id": 773050,
+   "name": "Stark's Fervor",
+   "cost": 2550,
+   "base": 900,
+   "sell": 1785,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Damage",
+    "LifeSteal",
+    "CooldownReduction",
+    "Aura"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 250
+   },
+   "description": "250 Health 20% Cooldown Reduction Aura - Triumph: Grants nearby allied champions 10% Life Steal and 20 Attack Damage .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773050.png",
+   "recipe": [
+    773067,
+    771053
+   ],
+   "combineCost": 900
+  },
+  {
+   "id": 773052,
+   "name": "Emblem of Valor",
+   "cost": 650,
+   "base": 170,
+   "sell": 455,
+   "purchasable": true,
+   "into": [
+    773060,
+    773190
+   ],
+   "tags": [
+    "Health",
+    "Armor"
+   ],
+   "stats": {
+    "FlatArmorMod": 20
+   },
+   "description": "20 Armor Aura - Valor: Grants nearby allied champions 7 Health Regen per 5 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773052.png",
+   "recipe": [
+    771029,
+    771006
+   ],
+   "combineCost": 170
+  },
+  {
+   "id": 773056,
+   "name": "Ohmwrecker",
+   "cost": 2835,
+   "base": 800,
+   "sell": 1985,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "HealthRegen",
+    "SpellDamage",
+    "ManaRegen"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 350,
+    "FlatMagicDamageMod": 50,
+    "FlatHPRegenMod": 3
+   },
+   "description": "350 Health 50 Ability Power 15 Health Regen per 5 seconds 15 Mana Regen per 5 seconds Active 120s Prevents nearby enemy turrets from attacking for 2.5 seconds. This effect cannot be used against the same turret more than once every 7.5 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773056.png",
+   "recipe": [
+    771028,
+    773096,
+    771026
+   ],
+   "combineCost": 800
+  },
+  {
+   "id": 773057,
+   "name": "Sheen",
+   "cost": 1200,
+   "base": 365,
+   "sell": 840,
+   "purchasable": true,
+   "into": [
+    773025,
+    773078,
+    773100
+   ],
+   "tags": [
+    "SpellDamage",
+    "Mana"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 200,
+    "FlatMagicDamageMod": 25
+   },
+   "description": "200 Mana 25 Ability Power Spellblade: After using an ability, the next Basic Attack deals bonus physical damage equal to base Attack Damage On-Hit (2 second cooldown).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773057.png",
+   "recipe": [
+    771052,
+    771027
+   ],
+   "combineCost": 365
+  },
+  {
+   "id": 773060,
+   "name": "Banner of Command",
+   "cost": 2360,
+   "base": 890,
+   "sell": 1652,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "HealthRegen",
+    "Armor",
+    "SpellDamage",
+    "CooldownReduction",
+    "Aura"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 40,
+    "FlatArmorMod": 30
+   },
+   "description": "40 Ability Power 30 Armor 10% Cooldown Reduction Aura - Leadership: Grants nearby allies 10 Health Regen per 5 seconds. Nearby allied minions deal 15% increased damage. Active 180s Empowers a nearby siege or super minion with an additional Health , 40 Armor , 50% Attack Speed , and 75 Attack Range and grants all gold the unit earns.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773060.png",
+   "recipe": [
+    773108,
+    773052
+   ],
+   "combineCost": 890
+  },
+  {
+   "id": 773063,
+   "name": "Soul Shroud",
+   "cost": 2285,
+   "base": 660,
+   "sell": 1600,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "ManaRegen",
+    "Aura",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 520
+   },
+   "description": "520 Health Whispers of the Dead: Nearby allied Champions gain 10% Cooldown Reduction and 12 Mana Regen per 5 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773063.png",
+   "recipe": [
+    773037,
+    773067,
+    771028
+   ],
+   "combineCost": 660
+  },
+  {
+   "id": 773065,
+   "name": "Spirit Visage",
+   "cost": 2750,
+   "base": 500,
+   "sell": 1925,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "SpellBlock",
+    "HealthRegen",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 55,
+    "FlatHPPoolMod": 400,
+    "FlatHPRegenMod": 0.8
+   },
+   "description": "400 Health 55 Magic Resist 4 Health Regen per 5 seconds 20% Cooldown Reduction Lifeforce: Increases self-healing , Health Regen , Lifesteal , and Spell Vamp effects by 20%.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773065.png",
+   "recipe": [
+    773211,
+    773067
+   ],
+   "combineCost": 500
+  },
+  {
+   "id": 773067,
+   "name": "Kindlegem",
+   "cost": 850,
+   "base": 375,
+   "sell": 595,
+   "purchasable": true,
+   "into": [
+    773050,
+    773063,
+    773065,
+    773069,
+    773207
+   ],
+   "tags": [
+    "Health",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 200
+   },
+   "description": "200 Health Kindlespark: 10% Cooldown Reduction",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773067.png",
+   "recipe": [
+    771028
+   ],
+   "combineCost": 375
+  },
+  {
+   "id": 773068,
+   "name": "Sunfire Cape",
+   "cost": 2650,
+   "base": 930,
+   "sell": 1855,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Armor"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 450,
+    "FlatArmorMod": 45
+   },
+   "description": "450 Health 45 Armor Searing Heat: Deals 40 magic damage per second to nearby enemies.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773068.png",
+   "recipe": [
+    771031,
+    771011
+   ],
+   "combineCost": 930
+  },
+  {
+   "id": 773069,
+   "name": "Shurelya's Reverie",
+   "cost": 2100,
+   "base": 550,
+   "sell": 1470,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "HealthRegen",
+    "ManaRegen",
+    "NonbootsMovement",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 250,
+    "FlatHPRegenMod": 2
+   },
+   "description": "250 Health 10 Health Regen per 5 seconds 10 Mana Regen per 5 seconds 10% Cooldown Reduction Active 60s Grants nearby allies 40% Move Speed for 3 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773069.png",
+   "recipe": [
+    773067,
+    773096
+   ],
+   "combineCost": 550
+  },
+  {
+   "id": 773070,
+   "name": "Tear of the Goddess",
+   "cost": 700,
+   "base": 120,
+   "sell": 490,
+   "purchasable": true,
+   "into": [
+    773003,
+    773004
+   ],
+   "tags": [
+    "Mana",
+    "ManaRegen"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 250
+   },
+   "description": "250 Mana 7 Mana Regen per 5 seconds Mana Charge: Grants 4 maximum Mana (max 750 Mana ) for each spell cast and Mana expenditure (occurs up to 2 times every 4 seconds).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773070.png",
+   "recipe": [
+    771027,
+    771004
+   ],
+   "combineCost": 120
+  },
+  {
+   "id": 773071,
+   "name": "The Black Cleaver",
+   "cost": 3000,
+   "base": 1188,
+   "sell": 2100,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Damage",
+    "OnHit",
+    "CooldownReduction",
+    "ArmorPenetration"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 200,
+    "FlatPhysicalDamageMod": 50
+   },
+   "description": "200 Health 50 Attack Damage 10% Cooldown Reduction Wicked Edge: 10 Lethality Cleaving Strike: Dealing physical damage to an enemy champion reduces their Armor by 5% for 4 seconds (stacks up to 5 times, up to 25%).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773071.png",
+   "recipe": [
+    773134,
+    771028
+   ],
+   "combineCost": 1188
+  },
+  {
+   "id": 773072,
+   "name": "The Bloodthirster",
+   "cost": 3200,
+   "base": 850,
+   "sell": 2240,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage",
+    "LifeSteal"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 70,
+    "PercentLifeStealMod": 0.12
+   },
+   "description": "70 Attack Damage 12% Life Steal Bloodthirst: Grants 1 Attack Damage and 0.2% Life Steal per stack (max 30 Attack Damage and 6% Life Steal ). Grants 1 stack per unit kill (max 30 stacks). Half of the stacks are lost upon death.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773072.png",
+   "recipe": [
+    771038,
+    771053
+   ],
+   "combineCost": 850
+  },
+  {
+   "id": 773074,
+   "name": "Ravenous Hydra",
+   "cost": 3300,
+   "base": 600,
+   "sell": 2310,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "HealthRegen",
+    "Damage",
+    "LifeSteal",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatHPRegenMod": 3,
+    "FlatPhysicalDamageMod": 75,
+    "PercentLifeStealMod": 0.12
+   },
+   "description": "75 Attack Damage 12% Life Steal 15 Health Regen per 5 seconds Insatiable Hunger: Life Steal applies to damage dealt by this item. Cleave: Basic Attacks deal 20% to 60% of total Attack Damage as bonus physical damage to enemies near the target On-Hit (enemies closest to the target take the most damage). Active 10s Deals 60% to 100% of total Attack Damage as physical damage to nearby enemy units (closest enemies take the most damage).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773074.png",
+   "recipe": [
+    773077,
+    771053
+   ],
+   "combineCost": 600
+  },
+  {
+   "id": 773075,
+   "name": "Thornmail",
+   "cost": 2200,
+   "base": 1180,
+   "sell": 1540,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Armor"
+   ],
+   "stats": {
+    "FlatArmorMod": 100
+   },
+   "description": "100 Armor Enchanted Spikes: Upon being hit by a Basic Attack, returns 30% of the incoming damage (before being reduced by defenses) to the attacker as magic damage .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773075.png",
+   "recipe": [
+    771029,
+    771031
+   ],
+   "combineCost": 1180
+  },
+  {
+   "id": 773077,
+   "name": "Tiamat",
+   "cost": 1900,
+   "base": 265,
+   "sell": 1330,
+   "purchasable": true,
+   "into": [
+    773074
+   ],
+   "tags": [
+    "HealthRegen",
+    "Damage",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatHPRegenMod": 3,
+    "FlatPhysicalDamageMod": 40
+   },
+   "description": "40 Attack Damage 15 Health Regen per 5 seconds Cleave: Basic Attacks deal 20% to 60% of total Attack Damage as bonus physical damage to enemies near the target On-Hit (enemies closest to the target take the most damage). Active 10s Deals 60% to 100% of total Attack Damage as physical damage to nearby enemy units (closest enemies take the most damage).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773077.png",
+   "recipe": [
+    771037,
+    771036,
+    771006,
+    771006
+   ],
+   "combineCost": 265
+  },
+  {
+   "id": 773078,
+   "name": "Trinity Force",
+   "cost": 3628,
+   "base": 3,
+   "sell": 2540,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Damage",
+    "CriticalStrike",
+    "AttackSpeed",
+    "SpellDamage",
+    "Mana",
+    "NonbootsMovement",
+    "OnHit",
+    "Slow"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 200,
+    "FlatHPPoolMod": 250,
+    "FlatMagicDamageMod": 30,
+    "FlatCritChanceMod": 0.1,
+    "FlatPhysicalDamageMod": 30,
+    "PercentAttackSpeedMod": 0.3,
+    "PercentMovementSpeedMod": 0.08
+   },
+   "description": "30 Attack Damage 30 Ability Power 30% Attack Speed 10% Critical Strike Chance 8% Move Speed 250 Health 200 Mana Rage: Basic Attacks grant 20 Move Speed for 2 seconds On-Hit. Kills grant 60 Move Speed for 2 seconds. Spellblade of Tons of Damage: After using an ability, the next Basic Attack deals bonus physical damage equal to 200% of base Attack Damage On-Hit (2 second cooldown).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773078.png",
+   "recipe": [
+    773086,
+    773057,
+    773044
+   ],
+   "combineCost": 3
+  },
+  {
+   "id": 773082,
+   "name": "Warden's Mail",
+   "cost": 1000,
+   "base": 400,
+   "sell": 700,
+   "purchasable": true,
+   "into": [
+    773143,
+    773110
+   ],
+   "tags": [
+    "Armor",
+    "Slow"
+   ],
+   "stats": {
+    "FlatArmorMod": 50
+   },
+   "description": "50 Armor Cold Steel: When hit by Basic Attacks, reduces the attacker's Attack Speed by 15% for 1 second.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773082.png",
+   "recipe": [
+    771029,
+    771029
+   ],
+   "combineCost": 400
+  },
+  {
+   "id": 773083,
+   "name": "Warmog's Armor",
+   "cost": 3000,
+   "base": 995,
+   "sell": 2100,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "HealthRegen"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 920,
+    "FlatHPRegenMod": 2
+   },
+   "description": "920 Health 10 Health Regen per 5 seconds Passive: Permanently gain 3.5 Health and 0.1 Health Regen per 5 sec. per stack. 1 stack is gained per minion or monster kill and 10 stacks are gained per Takedown. Maximum bonuses: Health and Health Regen per 5 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773083.png",
+   "recipe": [
+    771011,
+    773132,
+    771006
+   ],
+   "combineCost": 995
+  },
+  {
+   "id": 773085,
+   "name": "Runaan's Hurricane",
+   "cost": 2400,
+   "base": 700,
+   "sell": 1680,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "AttackSpeed",
+    "OnHit"
+   ],
+   "stats": {
+    "PercentAttackSpeedMod": 0.7
+   },
+   "description": "70% Attack Speed Hurricane Volley: When Attacking, bolts are fired at up to 2 enemies near the target, each dealing each dealing physical damage . These bolts apply on-hit effects.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773085.png",
+   "recipe": [
+    771042,
+    771043,
+    771042
+   ],
+   "combineCost": 700
+  },
+  {
+   "id": 773086,
+   "name": "Zeal",
+   "cost": 1175,
+   "base": 375,
+   "sell": 823,
+   "purchasable": true,
+   "into": [
+    773046,
+    773087,
+    773078
+   ],
+   "tags": [
+    "CriticalStrike",
+    "AttackSpeed",
+    "NonbootsMovement"
+   ],
+   "stats": {
+    "FlatCritChanceMod": 0.1,
+    "PercentAttackSpeedMod": 0.18,
+    "PercentMovementSpeedMod": 0.05
+   },
+   "description": "18% Attack Speed 10% Critical Strike Chance 5% Move Speed",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773086.png",
+   "recipe": [
+    771051,
+    771042
+   ],
+   "combineCost": 375
+  },
+  {
+   "id": 773087,
+   "name": "Statikk Shiv",
+   "cost": 2500,
+   "base": 525,
+   "sell": 1750,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "CriticalStrike",
+    "AttackSpeed",
+    "NonbootsMovement",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatCritChanceMod": 0.2,
+    "PercentAttackSpeedMod": 0.4,
+    "PercentMovementSpeedMod": 0.06
+   },
+   "description": "40% Attack Speed 20% Critical Strike Chance 6% Move Speed Statikk Shank: Grants Static Charges upon moving or Attacking. At 100 Charges, Attacking expends all Charges to deal 100 bonus magic damage to up to 4 targets On-Hit (this damage can critically strike).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773087.png",
+   "recipe": [
+    773086,
+    773093
+   ],
+   "combineCost": 525
+  },
+  {
+   "id": 773089,
+   "name": "Rabadon's Deathcap",
+   "cost": 3300,
+   "base": 840,
+   "sell": 2310,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellDamage"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 120
+   },
+   "description": "120 Ability Power Magical Opus: Increases Ability Power by 30% .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773089.png",
+   "recipe": [
+    771058,
+    771026
+   ],
+   "combineCost": 840
+  },
+  {
+   "id": 773091,
+   "name": "Wit's End",
+   "cost": 2150,
+   "base": 850,
+   "sell": 1505,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "AttackSpeed",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 25,
+    "PercentAttackSpeedMod": 0.4
+   },
+   "description": "40% Attack Speed 25 Magic Resist Feedback Loop: Basic Attacks deal 42 bonus magic damage On-Hit and increase your Magic Resist by 5 for 5 seconds (stacks up to 4 times.)",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773091.png",
+   "recipe": [
+    771043,
+    771033
+   ],
+   "combineCost": 850
+  },
+  {
+   "id": 773092,
+   "name": "Shard of True Ice",
+   "cost": 1600,
+   "base": 535,
+   "sell": 640,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellDamage",
+    "ManaRegen",
+    "Aura",
+    "Slow",
+    "GoldPer"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 45
+   },
+   "description": "45 Ability Power Lucky Shadow: 4 Gold per 10 seconds Mana Infusion: Grants nearby allied champions 5 Mana Regen per 5 seconds. Active 60s Surrounds an ally with a blizzard for 4 seconds that Slows nearby enemy Movement Speed by 30%.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773092.png",
+   "recipe": [
+    773098,
+    773037
+   ],
+   "combineCost": 535
+  },
+  {
+   "id": 773093,
+   "name": "Avarice Blade",
+   "cost": 800,
+   "base": 400,
+   "sell": 320,
+   "purchasable": true,
+   "into": [
+    773123,
+    773087,
+    773005,
+    773142
+   ],
+   "tags": [
+    "CriticalStrike",
+    "GoldPer"
+   ],
+   "stats": {
+    "FlatCritChanceMod": 0.1
+   },
+   "description": "10% Critical Strike Chance Avarice: 3 Gold per 10 seconds Greed: Grants 2 Gold upon killing a unit.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773093.png",
+   "recipe": [
+    771051
+   ],
+   "combineCost": 400
+  },
+  {
+   "id": 773096,
+   "name": "Philosopher's Stone",
+   "cost": 700,
+   "base": 340,
+   "sell": 280,
+   "purchasable": true,
+   "into": [
+    773056,
+    773222,
+    773084,
+    773069,
+    773173
+   ],
+   "tags": [
+    "HealthRegen",
+    "ManaRegen",
+    "GoldPer"
+   ],
+   "stats": {
+    "FlatHPRegenMod": 1.4
+   },
+   "description": "7 Health Regen per 5 seconds 9 Mana Regen per 5 seconds Transmute: 5 Gold per 10 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773096.png",
+   "recipe": [
+    771004,
+    771006
+   ],
+   "combineCost": 340
+  },
+  {
+   "id": 773098,
+   "name": "Lucky Pick",
+   "cost": 765,
+   "base": 330,
+   "sell": 536,
+   "purchasable": true,
+   "into": [
+    773504,
+    773023,
+    773092,
+    773152,
+    773165
+   ],
+   "tags": [
+    "SpellDamage"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 25
+   },
+   "description": "25 Ability Power Lucky Shadow: 4 Gold per 10 seconds",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773098.png",
+   "recipe": [
+    771052
+   ],
+   "combineCost": 330
+  },
+  {
+   "id": 773100,
+   "name": "Lich Bane",
+   "cost": 3000,
+   "base": 940,
+   "sell": 2100,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellDamage",
+    "Mana",
+    "NonbootsMovement"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 250,
+    "FlatMagicDamageMod": 80,
+    "PercentMovementSpeedMod": 0.05
+   },
+   "description": "80 Ability Power 250 Mana 5% Move Speed Spellblade of The Arcane: After using an ability, the next Basic Attack deals bonus magic damage On-Hit (2 second cooldown).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773100.png",
+   "recipe": [
+    773057,
+    771026
+   ],
+   "combineCost": 940
+  },
+  {
+   "id": 773101,
+   "name": "Stinger",
+   "cost": 1250,
+   "base": 450,
+   "sell": 875,
+   "purchasable": true,
+   "into": [
+    773172,
+    773115
+   ],
+   "tags": [
+    "AttackSpeed",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "PercentAttackSpeedMod": 0.4
+   },
+   "description": "40% Attack Speed Light as a Feather: 10% Cooldown Reduction",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773101.png",
+   "recipe": [
+    771042,
+    771042
+   ],
+   "combineCost": 450
+  },
+  {
+   "id": 773102,
+   "name": "Banshee's Veil",
+   "cost": 2750,
+   "base": 875,
+   "sell": 1925,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "HealthRegen",
+    "SpellDamage"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 55,
+    "FlatHPPoolMod": 450
+   },
+   "description": "450 Health 55 Magic Resist Intangibility: Grants a Spell Shield that blocks the next enemy ability. This Shield refreshes after no damage is taken from enemy champions for 25 seconds. Shadow Mending: Grants 45 Health Regen per 5 for up to 10 seconds after taking damage from an enemy champion or when the Spell Shield breaks.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773102.png",
+   "recipe": [
+    773211,
+    771028
+   ],
+   "combineCost": 875
+  },
+  {
+   "id": 773105,
+   "name": "Aegis of the Legion",
+   "cost": 2150,
+   "base": 625,
+   "sell": 1505,
+   "purchasable": true,
+   "into": [
+    773107
+   ],
+   "tags": [
+    "Health",
+    "SpellBlock",
+    "Armor",
+    "Aura"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 20,
+    "FlatHPPoolMod": 250,
+    "FlatArmorMod": 20
+   },
+   "description": "250 Health 20 Armor 20 Magic Resist Aura - Legion: Grants nearby allies 10 Armor and 15 Magic Resist . This effect is increased by 50% on allied minions.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773105.png",
+   "recipe": [
+    773132,
+    771029,
+    771033
+   ],
+   "combineCost": 625
+  },
+  {
+   "id": 773106,
+   "name": "Madred's Razors",
+   "cost": 700,
+   "base": 100,
+   "sell": 490,
+   "purchasable": true,
+   "into": [
+    773154,
+    773109
+   ],
+   "tags": [
+    "Armor",
+    "OnHit",
+    "Jungle"
+   ],
+   "stats": {
+    "FlatArmorMod": 25
+   },
+   "description": "25 Armor Passive: Basic Attacks have a 25% chance to deal 300 bonus magic damage to minions and monsters On-Hit.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773106.png",
+   "recipe": [
+    771039,
+    771029
+   ],
+   "combineCost": 100
+  },
+  {
+   "id": 773107,
+   "name": "Runic Bulwark",
+   "cost": 2950,
+   "base": 400,
+   "sell": 2065,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "SpellBlock",
+    "HealthRegen",
+    "Armor",
+    "Aura"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 30,
+    "FlatHPPoolMod": 300,
+    "FlatArmorMod": 20
+   },
+   "description": "300 Health 20 Armor 30 Magic Resist Aura - Legion: Grants nearby allies 10 Armor and 25 Magic Resist . This effect is increased by 50% on allied minions.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773107.png",
+   "recipe": [
+    771033,
+    773105
+   ],
+   "combineCost": 400
+  },
+  {
+   "id": 773108,
+   "name": "Fiendish Codex",
+   "cost": 820,
+   "base": 385,
+   "sell": 574,
+   "purchasable": true,
+   "into": [
+    773128,
+    773060,
+    773174,
+    773115,
+    773165
+   ],
+   "tags": [
+    "SpellDamage",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 30
+   },
+   "description": "30 Ability Power Fiendish Recall: 10% Cooldown Reduction",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773108.png",
+   "recipe": [
+    771052
+   ],
+   "combineCost": 385
+  },
+  {
+   "id": 773110,
+   "name": "Frozen Heart",
+   "cost": 2900,
+   "base": 550,
+   "sell": 2030,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Armor",
+    "Mana",
+    "CooldownReduction",
+    "Aura"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 400,
+    "FlatArmorMod": 95
+   },
+   "description": "95 Armor 400 Mana 20% Cooldown Reduction Aura - Frostbite: Reduces the Attack Speed of nearby enemies by 20%.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773110.png",
+   "recipe": [
+    773024,
+    773082
+   ],
+   "combineCost": 550
+  },
+  {
+   "id": 773111,
+   "name": "Mercury's Treads",
+   "cost": 1200,
+   "base": 475,
+   "sell": 840,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "Boots",
+    "Tenacity"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 25
+   },
+   "description": "25 Magic Resist Enhanced Movement: 45 Move Speed Tenacity: Reduces the duration of Stuns, Slows, Taunts, Fears, Silences, Blinds, and Immobilizes by 35% .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773111.png",
+   "recipe": [
+    771001,
+    771033
+   ],
+   "combineCost": 475
+  },
+  {
+   "id": 773114,
+   "name": "Malady",
+   "cost": 2035,
+   "base": 800,
+   "sell": 1425,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "AttackSpeed",
+    "SpellDamage",
+    "OnHit",
+    "MagicPenetration"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 25,
+    "PercentAttackSpeedMod": 0.45
+   },
+   "description": "25 Ability Power 45% Attack Speed Cursed Blade: Basic Attacks deal bonus magic damage On-Hit and remove 4 Magic Resist from the target for 8 seconds (stacks up to 7 times).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773114.png",
+   "recipe": [
+    771042,
+    771042,
+    771052
+   ],
+   "combineCost": 800
+  },
+  {
+   "id": 773115,
+   "name": "Nashor's Tooth",
+   "cost": 2500,
+   "base": 430,
+   "sell": 1750,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "AttackSpeed",
+    "SpellDamage",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 65,
+    "PercentAttackSpeedMod": 0.5
+   },
+   "description": "65 Ability Power 50% Attack Speed 20% Cooldown Reduction",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773115.png",
+   "recipe": [
+    773101,
+    773108
+   ],
+   "combineCost": 430
+  },
+  {
+   "id": 773116,
+   "name": "Rylai's Crystal Scepter",
+   "cost": 2900,
+   "base": 605,
+   "sell": 2030,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "SpellDamage",
+    "Slow"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 500,
+    "FlatMagicDamageMod": 80
+   },
+   "description": "500 Health 80 Ability Power Frost Crystal: Dealing spell damage Slows the target's Move Speed by 35% for 1.5 seconds (15% for multi-target and damage-over-time spells).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773116.png",
+   "recipe": [
+    771026,
+    771052,
+    771011
+   ],
+   "combineCost": 605
+  },
+  {
+   "id": 773117,
+   "name": "Boots of Mobility",
+   "cost": 1000,
+   "base": 675,
+   "sell": 700,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Boots"
+   ],
+   "stats": {},
+   "description": "Enhanced Movement: 45 Move Speed . Increases to 105 Move Speed when out of combat for 5 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773117.png",
+   "recipe": [
+    771001
+   ],
+   "combineCost": 675
+  },
+  {
+   "id": 773123,
+   "name": "Executioner's Calling",
+   "cost": 1900,
+   "base": 700,
+   "sell": 1330,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage",
+    "CriticalStrike",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatCritChanceMod": 0.2,
+    "FlatPhysicalDamageMod": 25
+   },
+   "description": "25 Attack Damage 20% Critical Strike Chance Rending Strike: Basic Attacks inflict Grievous Wounds on enemy champions for 1.5 seconds On-Hit. ( Grievous Wounds reduces incoming healing and regeneration effects by 50%.)",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773123.png",
+   "recipe": [
+    773093,
+    771036
+   ],
+   "combineCost": 700
+  },
+  {
+   "id": 773124,
+   "name": "Guinsoo's Rageblade",
+   "cost": 2600,
+   "base": 865,
+   "sell": 1820,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage",
+    "AttackSpeed",
+    "LifeSteal",
+    "SpellDamage",
+    "OnHit",
+    "SpellVamp"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 40,
+    "FlatPhysicalDamageMod": 30
+   },
+   "description": "30 Attack Damage 40 Ability Power Growing Fury: Basic Attacks (on attack) and spell casts grant 4% Attack Speed and 4 Ability Power for 8 seconds (stacks up to 8 times). Enrage: Falling below 50% Health grants 20% Attack Speed , 10% Life Steal , and 10% Spell Vamp until out of combat (30 second cooldown).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773124.png",
+   "recipe": [
+    771026,
+    771037
+   ],
+   "combineCost": 865
+  },
+  {
+   "id": 773128,
+   "name": "Deathfire Grasp",
+   "cost": 3100,
+   "base": 680,
+   "sell": 2170,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellDamage",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 120
+   },
+   "description": "120 Ability Power 10% Cooldown Reduction Active 60s Deals 15% of target champion's maximum Health in magic damage and increases all subsequent magic damage taken by the target by 20% for 4 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773128.png",
+   "recipe": [
+    771058,
+    773108
+   ],
+   "combineCost": 680
+  },
+  {
+   "id": 773131,
+   "name": "Sword of the Divine",
+   "cost": 2150,
+   "base": 850,
+   "sell": 1505,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "CriticalStrike",
+    "AttackSpeed"
+   ],
+   "stats": {},
+   "description": "45% Attack Speed. Forsaken: This item does not grant any Attack Speed while on cooldown. Champion kills reduce the current cooldown by 50%. Active 60s Grants 100% Attack Speed and 100% Critical Strike Chance for 3 seconds or 3 critical strikes.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773131.png",
+   "recipe": [
+    771043,
+    771042
+   ],
+   "combineCost": 850
+  },
+  {
+   "id": 773132,
+   "name": "Heart of Gold",
+   "cost": 825,
+   "base": 350,
+   "sell": 413,
+   "purchasable": true,
+   "into": [
+    773143,
+    772045,
+    773083,
+    773105,
+    773190
+   ],
+   "tags": [
+    "Health",
+    "GoldPer"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 200
+   },
+   "description": "200 Health Shelling Out: 5 Gold per 10 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773132.png",
+   "recipe": [
+    771028
+   ],
+   "combineCost": 350
+  },
+  {
+   "id": 773134,
+   "name": "The Brutalizer",
+   "cost": 1337,
+   "base": 537,
+   "sell": 936,
+   "purchasable": true,
+   "into": [
+    773071,
+    773142
+   ],
+   "tags": [
+    "Damage",
+    "CooldownReduction",
+    "ArmorPenetration"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 25
+   },
+   "description": "25 Attack Damage Onslaught: 10% Cooldown Reduction Crushing Blow: 10 Lethality",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773134.png",
+   "recipe": [
+    771036,
+    771036
+   ],
+   "combineCost": 537
+  },
+  {
+   "id": 773135,
+   "name": "Void Staff",
+   "cost": 2295,
+   "base": 1000,
+   "sell": 1607,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellDamage",
+    "MagicPenetration"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 70
+   },
+   "description": "70 Ability Power Touch of the Void: Magic damage ignores 35% of the target's Magic Resist .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773135.png",
+   "recipe": [
+    771026,
+    771052
+   ],
+   "combineCost": 1000
+  },
+  {
+   "id": 773136,
+   "name": "Haunting Guise",
+   "cost": 1485,
+   "base": 575,
+   "sell": 1040,
+   "purchasable": true,
+   "into": [
+    773151
+   ],
+   "tags": [
+    "Health",
+    "SpellDamage",
+    "MagicPenetration"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 200,
+    "FlatMagicDamageMod": 25
+   },
+   "description": "25 Ability Power 200 Health Eyes of Pain: 15 Magic Penetration",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773136.png",
+   "recipe": [
+    771028,
+    771052
+   ],
+   "combineCost": 575
+  },
+  {
+   "id": 773138,
+   "name": "Leviathan",
+   "cost": 1275,
+   "base": 800,
+   "sell": 893,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 180
+   },
+   "description": "180 Health Juggernaut: Grants 32 Health per stack. Grants 2 stacks for a kill or 1 stack for an assist (maximum 20 stacks). A third of the stacks are lost upon death. At 20 stacks, reduces all damage taken by 15%.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773138.png",
+   "recipe": [
+    771028
+   ],
+   "combineCost": 800
+  },
+  {
+   "id": 773139,
+   "name": "Mercurial Scimitar",
+   "cost": 3700,
+   "base": 600,
+   "sell": 2590,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "Damage",
+    "NonbootsMovement"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 45,
+    "FlatPhysicalDamageMod": 60
+   },
+   "description": "60 Attack Damage 45 Magic Resist Active 90s Removes all debuffs, and if champion is melee, also grants 50% bonus Move Speed for 1 second.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773139.png",
+   "recipe": [
+    773140,
+    771038
+   ],
+   "combineCost": 600
+  },
+  {
+   "id": 773140,
+   "name": "Quicksilver Sash",
+   "cost": 1550,
+   "base": 830,
+   "sell": 1085,
+   "purchasable": true,
+   "into": [
+    773139
+   ],
+   "tags": [
+    "SpellBlock"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 45
+   },
+   "description": "45 Magic Resist Active 90s Removes all debuffs.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773140.png",
+   "recipe": [
+    771057
+   ],
+   "combineCost": 830
+  },
+  {
+   "id": 773141,
+   "name": "Sword of the Occult",
+   "cost": 1200,
+   "base": 800,
+   "sell": 840,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 10
+   },
+   "description": "10 Attack Damage Demonic Pact: Grants 5 Attack Damage per stack. Grants 2 stacks for a kill or 1 stack for an assist (max 20 stacks). A third of the stacks are lost upon death. At 20 stacks, grants 15% bonus Move Speed .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773141.png",
+   "recipe": [
+    771036
+   ],
+   "combineCost": 800
+  },
+  {
+   "id": 773142,
+   "name": "Youmuu's Ghostblade",
+   "cost": 2700,
+   "base": 563,
+   "sell": 1890,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage",
+    "CriticalStrike",
+    "AttackSpeed",
+    "NonbootsMovement",
+    "CooldownReduction",
+    "ArmorPenetration"
+   ],
+   "stats": {
+    "FlatCritChanceMod": 0.15,
+    "FlatPhysicalDamageMod": 30
+   },
+   "description": "30 Attack Damage 15% Critical Strike Chance 10% Cooldown Reduction Spirit Edge: 20 Lethality Active 45s Grants 20% Move Speed and 40% Attack Speed (lasts 6 seconds for melee champions, 4 seconds for ranged champions).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773142.png",
+   "recipe": [
+    773093,
+    773134
+   ],
+   "combineCost": 563
+  },
+  {
+   "id": 773143,
+   "name": "Randuin's Omen",
+   "cost": 3125,
+   "base": 1000,
+   "sell": 2188,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Armor"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 500,
+    "FlatArmorMod": 70
+   },
+   "description": "500 Health 70 Armor Cold Steel: When hit by Basic Attacks, reduces the attacker's Attack Speed by 15% and Move Speed by 10% for 1 seconds. Active 60s Slows nearby enemy units by 35% for seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773143.png",
+   "recipe": [
+    773132,
+    773082,
+    771029
+   ],
+   "combineCost": 1000
+  },
+  {
+   "id": 773144,
+   "name": "Bilgewater Cutlass",
+   "cost": 1400,
+   "base": 200,
+   "sell": 980,
+   "purchasable": true,
+   "into": [
+    773153,
+    773146
+   ],
+   "tags": [
+    "Damage",
+    "LifeSteal",
+    "Slow"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 25,
+    "PercentLifeStealMod": 0.12
+   },
+   "description": "25 Attack Damage 12% Life Steal Active 90s Deals 100 magic damage and Slows the target champion's Move Speed by 25% for 2 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773144.png",
+   "recipe": [
+    771053,
+    771036
+   ],
+   "combineCost": 200
+  },
+  {
+   "id": 773145,
+   "name": "Hextech Revolver",
+   "cost": 1200,
+   "base": 330,
+   "sell": 840,
+   "purchasable": true,
+   "into": [
+    773206,
+    773146,
+    773152
+   ],
+   "tags": [
+    "SpellDamage",
+    "SpellVamp"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 40
+   },
+   "description": "40 Ability Power Hex Bullets: 12% Spell Vamp",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773145.png",
+   "recipe": [
+    771052,
+    771052
+   ],
+   "combineCost": 330
+  },
+  {
+   "id": 773146,
+   "name": "Hextech Gunblade",
+   "cost": 3400,
+   "base": 800,
+   "sell": 2380,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage",
+    "LifeSteal",
+    "SpellDamage",
+    "Slow",
+    "SpellVamp"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 65,
+    "FlatPhysicalDamageMod": 45,
+    "PercentLifeStealMod": 0.12
+   },
+   "description": "65 Ability Power 45 Attack Damage 12% Life Steal Hex Cannon: 20% Spell Vamp Reload: Basic Attacks (On-Hit) and single-target spells against champions reduce the cooldown of this item by 3 seconds. Active 60s Deals magic damage and Slows the target champion's Move Speed by 40% for 2 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773146.png",
+   "recipe": [
+    773145,
+    773144
+   ],
+   "combineCost": 800
+  },
+  {
+   "id": 773151,
+   "name": "Liandry's Torment",
+   "cost": 2900,
+   "base": 980,
+   "sell": 2030,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "SpellDamage",
+    "MagicPenetration"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 300,
+    "FlatMagicDamageMod": 50
+   },
+   "description": "50 Ability Power 300 Health Eyes of Pain: 15 Magic Penetration Mana Burn: Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second . This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773151.png",
+   "recipe": [
+    773136,
+    771052
+   ],
+   "combineCost": 980
+  },
+  {
+   "id": 773152,
+   "name": "Will of the Ancients",
+   "cost": 2550,
+   "base": 585,
+   "sell": 1785,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellDamage",
+    "Aura",
+    "SpellVamp"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 50
+   },
+   "description": "50 Ability Power Aura - Tradition: Grants nearby allied champions 30 Ability Power and 20% Spellvamp .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773152.png",
+   "recipe": [
+    773098,
+    773145
+   ],
+   "combineCost": 585
+  },
+  {
+   "id": 773153,
+   "name": "Blade of The Ruined King",
+   "cost": 3200,
+   "base": 1000,
+   "sell": 2240,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage",
+    "AttackSpeed",
+    "LifeSteal",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 25,
+    "PercentAttackSpeedMod": 0.4,
+    "PercentLifeStealMod": 0.15
+   },
+   "description": "25 Attack Damage 40% Attack Speed 15% Life Steal Ruination: Basic Attacks deal 5% of the target's current Health as bonus physical damage On-Hit. (Max 60 to Minions and Monsters) Active 90s Deals 15% max health to target champion (Min 100 Damage) and steals 30% of their Move Speed for 3 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773153.png",
+   "recipe": [
+    771042,
+    773144,
+    771042
+   ],
+   "combineCost": 1000
+  },
+  {
+   "id": 773154,
+   "name": "Wriggle's Lantern",
+   "cost": 2000,
+   "base": 400,
+   "sell": 1400,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Armor",
+    "Damage",
+    "LifeSteal",
+    "Vision",
+    "Active",
+    "OnHit",
+    "Jungle"
+   ],
+   "stats": {
+    "FlatArmorMod": 25,
+    "PercentAttackSpeedMod": 0.3,
+    "PercentLifeStealMod": 0.15
+   },
+   "description": "30% Attack Speed 25 Armor 15% Life Steal Passive: Basic Attacks have a 25% chance to deal 500 bonus magic damage to minions and monsters On-Hit. Transforms into Feral Flare after earning 30 large Monsters kills or Champion takedowns. Active 180s Places an invisible Sight Ward that reveals the surrounding area for 180 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773154.png",
+   "recipe": [
+    773106,
+    771043
+   ],
+   "combineCost": 400
+  },
+  {
+   "id": 773155,
+   "name": "Hexdrinker",
+   "cost": 1350,
+   "base": 550,
+   "sell": 945,
+   "purchasable": true,
+   "into": [
+    773156
+   ],
+   "tags": [
+    "SpellBlock",
+    "Damage"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 25,
+    "FlatPhysicalDamageMod": 25
+   },
+   "description": "25 Attack Damage 25 Magic Resist Lifeline: Upon taking magic damage that would reduce Health below 30%, grants a Shield that absorbs 250 magic damage for 5 seconds (90 second cooldown).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773155.png",
+   "recipe": [
+    771036,
+    771033
+   ],
+   "combineCost": 550
+  },
+  {
+   "id": 773156,
+   "name": "Maw of Malmortius",
+   "cost": 3200,
+   "base": 975,
+   "sell": 2240,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "Damage"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 40,
+    "FlatPhysicalDamageMod": 60
+   },
+   "description": "60 Attack Damage 40 Magic Resist Feeding Frenzy: Grants 1 Attack Damage for every 2% of missing Health , up to a maximum of 35 Attack Damage . Lifeline: Upon taking magic damage that would reduce Health below 30%, grants a Shield that absorbs 400 magic damage for 5 seconds (90 second cooldown).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773156.png",
+   "recipe": [
+    773155,
+    771037
+   ],
+   "combineCost": 975
+  },
+  {
+   "id": 773157,
+   "name": "Zhonya's Hourglass",
+   "cost": 3260,
+   "base": 500,
+   "sell": 2282,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Armor",
+    "SpellDamage"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 120,
+    "FlatArmorMod": 50
+   },
+   "description": "120 Ability Power 50 Armor Active 90s Champion becomes Invulnerable and Untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773157.png",
+   "recipe": [
+    773191,
+    771058
+   ],
+   "combineCost": 500
+  },
+  {
+   "id": 773158,
+   "name": "Ionian Boots of Lucidity",
+   "cost": 1000,
+   "base": 675,
+   "sell": 700,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Boots",
+    "CooldownReduction"
+   ],
+   "stats": {},
+   "description": "Light Step: 15% Cooldown Reduction Enhanced Movement: 45 Move Speed \"This item is dedicated in honor of Ionia's victory over Noxus in the Rematch for the Southern Provinces on 10 December, 20 CLE.\"",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773158.png",
+   "recipe": [
+    771001
+   ],
+   "combineCost": 675
+  },
+  {
+   "id": 773160,
+   "name": "Feral Flare",
+   "cost": 2000,
+   "base": 2000,
+   "sell": 1400,
+   "purchasable": false,
+   "into": [],
+   "tags": [
+    "Armor",
+    "Damage",
+    "LifeSteal",
+    "Vision",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatArmorMod": 25,
+    "PercentAttackSpeedMod": 0.3,
+    "PercentLifeStealMod": 0.15
+   },
+   "description": "30% Attack Speed 25 Armor 15% Life Steal Feral Mark: Gain a Feral stack for each champion takedown scored and large monster killed. Basic Attacks deal 25 (+1 per Feral stack) bonus magic damage on-hit. Minions and monsters have a 25% chance to take 425 more damage. Active 180s Places an invisible Sight Ward that reveals the surrounding area for 180 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773160.png",
+   "recipe": []
+  },
+  {
+   "id": 773165,
+   "name": "Morellonomicon",
+   "cost": 2200,
+   "base": 435,
+   "sell": 1540,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellDamage",
+    "ManaRegen",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 75
+   },
+   "description": "75 Ability Power 12 Mana Regen per 5 seconds 20% Cooldown Reduction Morello's Hatred: Dealing magic damage to enemy champions below 40% Health inflicts Grievous Wounds for 4 seconds. ( Grievous Wounds reduces incoming healing and regeneration effects by 50%.)",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773165.png",
+   "recipe": [
+    773098,
+    771004,
+    773108
+   ],
+   "combineCost": 435
+  },
+  {
+   "id": 773172,
+   "name": "Zephyr",
+   "cost": 2850,
+   "base": 725,
+   "sell": 1995,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Damage",
+    "AttackSpeed",
+    "NonbootsMovement",
+    "CooldownReduction",
+    "Tenacity"
+   ],
+   "stats": {
+    "FlatPhysicalDamageMod": 25,
+    "PercentAttackSpeedMod": 0.5,
+    "PercentMovementSpeedMod": 0.1
+   },
+   "description": "25 Attack Damage 50% Attack Speed 10% Move Speed 10% Cooldown Reduction Tenacity: Reduces the duration of Stuns, Slows, Taunts, Fears, Silences, Blinds, and Immobilizes by 35% .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773172.png",
+   "recipe": [
+    773101,
+    771037
+   ],
+   "combineCost": 725
+  },
+  {
+   "id": 773173,
+   "name": "Eleisa's Miracle",
+   "cost": 1100,
+   "base": 400,
+   "sell": 440,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "HealthRegen",
+    "ManaRegen"
+   ],
+   "stats": {
+    "FlatHPRegenMod": 2
+   },
+   "description": "10 Health Regen per 5 seconds 15 Mana Regen per 5 seconds Aid: Heal, Clairvoyance and Clarity summoner spell cooldowns are reduced by 30%. Eleisa's Blessing: Upon gaining 3 levels with this item, all effects of this item become permanent, and this item is consumed.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773173.png",
+   "recipe": [
+    773096
+   ],
+   "combineCost": 400
+  },
+  {
+   "id": 773174,
+   "name": "Shushei's Mana Jug",
+   "cost": 2600,
+   "base": 900,
+   "sell": 1820,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "SpellDamage",
+    "ManaRegen",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 40,
+    "FlatMagicDamageMod": 60
+   },
+   "description": "60 Ability Power 40 Magic Resist 20% Cooldown Reduction 15 Mana Regen per 5 seconds Rabble-Rousing: Restores Health and Mana on kill or assist. Mana Font: Increases Mana Regen by 1% for every 1% of missing Mana.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773174.png",
+   "recipe": [
+    773108,
+    773028
+   ],
+   "combineCost": 900
+  },
+  {
+   "id": 773178,
+   "name": "Ionic Spark",
+   "cost": 1950,
+   "base": 575,
+   "sell": 1365,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "AttackSpeed",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 250,
+    "PercentAttackSpeedMod": 0.5
+   },
+   "description": "50% Attack Speed 250 Health Ionic Charge: Every 4th Basic Attack unleases a chain of lightning, dealing 125 magic damage to up to 4 targets in a 400 radius of each other. Targets cannot be hit twice by the same lightning.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773178.png",
+   "recipe": [
+    771043,
+    771028
+   ],
+   "combineCost": 575
+  },
+  {
+   "id": 773190,
+   "name": "Locket of the Iron Solari",
+   "cost": 2225,
+   "base": 750,
+   "sell": 1558,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "HealthRegen",
+    "Armor",
+    "Aura"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 300,
+    "FlatArmorMod": 35
+   },
+   "description": "300 Health 35 Armor Solari Resilience: Grants nearby allied champions 15 Health Regen per 5 seconds. Active 60s Grants a Shield to nearby allies for 5 seconds that absorbs up to damage.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773190.png",
+   "recipe": [
+    773052,
+    773132
+   ],
+   "combineCost": 750
+  },
+  {
+   "id": 773191,
+   "name": "Seeker's Armguard",
+   "cost": 1160,
+   "base": 125,
+   "sell": 812,
+   "purchasable": true,
+   "into": [
+    773161,
+    773157
+   ],
+   "tags": [
+    "Armor",
+    "SpellDamage"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 20,
+    "FlatArmorMod": 30
+   },
+   "description": "30 Armor 20 Ability Power Seeker's Insight: Killing a unit grants 0.5 bonus Armor and Ability Power. This bonus stacks up to 30 times.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773191.png",
+   "recipe": [
+    771029,
+    771052,
+    771029
+   ],
+   "combineCost": 125
+  },
+  {
+   "id": 773206,
+   "name": "Spirit of the Spectral Wraith",
+   "cost": 2000,
+   "base": 100,
+   "sell": 1400,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellDamage",
+    "ManaRegen",
+    "OnHit",
+    "CooldownReduction",
+    "SpellVamp"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 40
+   },
+   "description": "40 Ability Power 10 Mana Regen per 5 seconds 10% Cooldown Reduction Wraith Touch: 20% Spell Vamp Haunting Memories: Reduces the cooldown of Smite by 20%. Butcher: Damage dealt to monsters increased by 30%.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773206.png",
+   "recipe": [
+    771080,
+    773145
+   ],
+   "combineCost": 100
+  },
+  {
+   "id": 773207,
+   "name": "Spirit of the Ancient Golem",
+   "cost": 2000,
+   "base": 450,
+   "sell": 1400,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "HealthRegen",
+    "ManaRegen",
+    "OnHit",
+    "CooldownReduction",
+    "Tenacity"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 500,
+    "FlatHPRegenMod": 2.8
+   },
+   "description": "500 Health 14 Health Regen per 5 seconds 7 Mana Regen per 5 seconds 10% Cooldown Reduction Butcher: Damage dealt to monsters increased by 30%. Tenacity: Reduces the duration of Stuns, Slows, Taunts, Fears, Silences, Blinds, and Immobilizes by 35%.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773207.png",
+   "recipe": [
+    771080,
+    773067
+   ],
+   "combineCost": 450
+  },
+  {
+   "id": 773209,
+   "name": "Spirit of the Elder Lizard",
+   "cost": 2000,
+   "base": 500,
+   "sell": 1400,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "HealthRegen",
+    "Damage",
+    "ManaRegen",
+    "OnHit",
+    "CooldownReduction"
+   ],
+   "stats": {
+    "FlatHPRegenMod": 2.8,
+    "FlatPhysicalDamageMod": 35
+   },
+   "description": "35 Attack Damage 14 Health Regen per 5 seconds 7 Mana Regen per 5 seconds 10% Cooldown Reduction Butcher: Damage dealt to monsters increased by 30%. Touch of Flame: Basic Attacks and spells that do not inflict damage-over-time deal bonus true damage over 3 seconds On-Hit.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773209.png",
+   "recipe": [
+    771080,
+    771036,
+    771036
+   ],
+   "combineCost": 500
+  },
+  {
+   "id": 773211,
+   "name": "Spectre's Cowl",
+   "cost": 1400,
+   "base": 205,
+   "sell": 980,
+   "purchasable": true,
+   "into": [
+    773102,
+    773065
+   ],
+   "tags": [
+    "Health",
+    "SpellBlock",
+    "HealthRegen"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 45,
+    "FlatHPPoolMod": 200
+   },
+   "description": "200 Health 45 Magic Resist Shadow Mending: Grants 15 Health Regen per 5 seconds for up to 10 seconds after taking damage from an enemy champion.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773211.png",
+   "recipe": [
+    771028,
+    771057
+   ],
+   "combineCost": 205
+  },
+  {
+   "id": 773222,
+   "name": "Mikael's Crucible",
+   "cost": 2500,
+   "base": 920,
+   "sell": 1750,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "HealthRegen",
+    "ManaRegen"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 40,
+    "FlatHPRegenMod": 1.4
+   },
+   "description": "40 Magic Resist 7 Health Regen per 5 seconds 18 Mana Regen per 5 seconds Mana Font: Increases Mana Regen by 1% for every 1% of missing Mana. Active 180s Removes all Stuns, Slows, Taunts, Fears, Silences, Blinds, and Immobilizes on an allied champion and Heals that champion for 150 ( +10% of maximum Health ).",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773222.png",
+   "recipe": [
+    773096,
+    773028
+   ],
+   "combineCost": 920
+  },
+  {
+   "id": 773340,
+   "name": "Yellow Trinket",
+   "cost": 0,
+   "base": 0,
+   "sell": 0,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Active",
+    "Jungle",
+    "Lane",
+    "Trinket",
+    "Vision"
+   ],
+   "stats": {},
+   "description": "Active s Places an Invisible Stealth Ward that grants vision for 60 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773340.png",
+   "recipe": []
+  },
+  {
+   "id": 773348,
+   "name": "Red Trinket",
+   "cost": 0,
+   "base": 0,
+   "sell": 0,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Active",
+    "Jungle",
+    "Lane",
+    "Trinket",
+    "Vision"
+   ],
+   "stats": {},
+   "description": "Active s Reveals enemy wards in the area for 8 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773348.png",
+   "recipe": []
+  },
+  {
+   "id": 773504,
+   "name": "Ardent Censer",
+   "cost": 2200,
+   "base": 895,
+   "sell": 1540,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "AttackSpeed",
+    "SpellDamage",
+    "ManaRegen",
+    "NonbootsMovement",
+    "AbilityHaste"
+   ],
+   "stats": {
+    "FlatMagicDamageMod": 40
+   },
+   "description": "40 Ability Power 10% Cooldown Reduction 10 Mana Regen per 5 seconds Dedication: 8% Move Speed Fervent Vapor: Your Heals and Shields on another unit grant them 25% attack speed for 6 seconds. This does not include regeneration effects or effects on yourself.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773504.png",
+   "recipe": [
+    771004,
+    771004,
+    771004,
+    773098
+   ],
+   "combineCost": 895
+  },
+  {
+   "id": 773109,
+   "name": "Madred's Bloodrazor",
+   "cost": 3800,
+   "base": 1325,
+   "sell": 2660,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Armor",
+    "Damage",
+    "AttackSpeed",
+    "OnHit"
+   ],
+   "stats": {
+    "FlatArmorMod": 25,
+    "FlatPhysicalDamageMod": 40,
+    "PercentAttackSpeedMod": 0.4
+   },
+   "description": "40 Attack Damage 40% Attack Speed 25 Armor Seeing Red : Attacks deal 4% of the target's maximum Health as bonus magic damage on-hit. Deals a maximum of 120 bonus damage to monsters.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773109.png",
+   "recipe": [
+    773106,
+    771037,
+    771043
+   ],
+   "combineCost": 1325
+  },
+  {
+   "id": 773064,
+   "name": "Force of Nature",
+   "cost": 2610,
+   "base": 1130,
+   "sell": 1827,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "HealthRegen",
+    "NonbootsMovement"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 76,
+    "FlatHPRegenMod": 4,
+    "PercentMovementSpeedMod": 0.08
+   },
+   "description": "76 Magic Resist 8% Move Speed 20 Health Regen per 5 seconds Steadfast : Regenerate an additional health per 5 seconds.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773064.png",
+   "recipe": [
+    771006,
+    771006,
+    771033,
+    771057
+   ],
+   "combineCost": 1130
+  },
+  {
+   "id": 773084,
+   "name": "Innervating Locket",
+   "cost": 2250,
+   "base": 350,
+   "sell": 1575,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Damage",
+    "Mana"
+   ],
+   "stats": {
+    "FlatMPPoolMod": 450,
+    "FlatHPPoolMod": 500
+   },
+   "description": "500 Health 450 Mana 10% Cooldown Reduction Innervation : Restore 60 Health and 25 Mana over 2 seconds to the lowest-Health nearby allied Champion whenever you use an Ability. Innervation has a 3 second cooldown.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773084.png",
+   "recipe": [
+    773096,
+    773010
+   ],
+   "combineCost": 350
+  },
+  {
+   "id": 772001,
+   "name": "Recall",
+   "cost": 60,
+   "base": 60,
+   "sell": 42,
+   "purchasable": false,
+   "into": [],
+   "tags": [],
+   "stats": {},
+   "description": "",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/772001.png",
+   "recipe": []
+  },
+  {
+   "id": 773073,
+   "name": "Stack of Sunfire Capes",
+   "cost": 3000,
+   "base": 1280,
+   "sell": 2100,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "Health",
+    "Armor",
+    "Bilgewater"
+   ],
+   "stats": {
+    "FlatHPPoolMod": 450,
+    "FlatArmorMod": 45
+   },
+   "description": "450 Health 45 Armor Excessive Heat: Deals 40 magic damage per second to nearby enemies.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773073.png",
+   "recipe": [
+    771031,
+    771011
+   ],
+   "combineCost": 1280
+  },
+  {
+   "id": 773161,
+   "name": "Moonflair Spellblade",
+   "cost": 2600,
+   "base": 720,
+   "sell": 1820,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "Armor",
+    "SpellDamage",
+    "Tenacity"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 50,
+    "FlatMagicDamageMod": 50,
+    "FlatArmorMod": 50
+   },
+   "description": "50 Ability Power 50 Armor 50 Magic Resist Tenacity: Reduces the duration of Stuns, Slows, Taunts, Fears, Silences, Blinds, and Immobilizes by 35% .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773161.png",
+   "recipe": [
+    773191,
+    771057
+   ],
+   "combineCost": 720
+  },
+  {
+   "id": 773162,
+   "name": "Cloak and Dagger",
+   "cost": 1330,
+   "base": 200,
+   "sell": 931,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "CriticalStrike",
+    "AttackSpeed"
+   ],
+   "stats": {
+    "FlatCritChanceMod": 0.2,
+    "PercentAttackSpeedMod": 0.2
+   },
+   "description": "20% Attack Speed 20% Critical Strike Chance Tenacity: Reduces the duration of Stuns, Slows, Taunts, Fears, Silences, Blinds, and Immobilizes by 35% .",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773162.png",
+   "recipe": [
+    771018,
+    771042
+   ],
+   "combineCost": 200
+  },
+  {
+   "id": 773512,
+   "name": "Zz'Rot Portal",
+   "cost": 2700,
+   "base": 1080,
+   "sell": 1890,
+   "purchasable": true,
+   "into": [],
+   "tags": [
+    "SpellBlock",
+    "HealthRegen",
+    "Armor",
+    "Active",
+    "NonbootsMovement"
+   ],
+   "stats": {
+    "FlatSpellBlockMod": 50,
+    "FlatArmorMod": 50,
+    "FlatHPRegenMod": 1
+   },
+   "description": "50 Armor 50 Magic Resist 5 Health Regen per 5 seconds Point Runner: Standing near turrets or Void Gates grants up to 30% Move Speed that builds up over 2 seconds. Active 150s Spawn a Void Gate at the target location for 150 seconds. Every 4 seconds the gate spawns a volatile Voidspawn that travels down the nearest lane.",
+   "icon": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/773512.png",
+   "recipe": [
+    771057,
+    771031,
+    771006
+   ],
+   "combineCost": 1080
+  }
+ ]
+}

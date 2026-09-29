@@ -1,0 +1,45 @@
+{
+  "activePlayer": {
+    "abilities": {
+      "E": {"abilityLevel": 0, "displayName": "Tantrum", "id": "Jade_AmumuTantrum"},
+      "Passive": {"displayName": "Cursed Touch", "id": "Jade_AmumuP"},
+      "Q": {"abilityLevel": 0, "displayName": "Bandage Toss", "id": "Jade_AmumuBandageToss"},
+      "R": {"abilityLevel": 0, "displayName": "Curse of the Sad Mummy", "id": "Jade_AmumuCurseoftheSadMummy"},
+      "W": {"abilityLevel": 0, "displayName": "Despair", "id": "Jade_AmumuAuraofDespair"}
+    },
+    "championStats": {
+      "armor": 40.3, "attackDamage": 50.8, "attackSpeed": 0.638, "currentHealth": 562.0,
+      "maxHealth": 562.0, "magicResist": 31.25, "moveSpeed": 356.775, "resourceType": "MANA",
+      "resourceMax": 444.0, "resourceValue": 444.0
+    },
+    "currentGold": 475.0,
+    "fullRunes": {},
+    "level": 1,
+    "riotId": "Summoner#NA1",
+    "summonerName": "Summoner#NA1"
+  },
+  "allPlayers": [
+    {
+      "championName": "Amumu",
+      "isBot": false,
+      "isDead": false,
+      "items": [
+        {"canUse": true, "consumable": true, "count": 1, "displayName": "Total Biscuit of Rejuvenation", "itemID": 772009, "price": 35, "slot": 0},
+        {"canUse": true, "consumable": true, "count": 1, "displayName": "Explorer's Ward", "itemID": 772050, "price": 75, "slot": 1}
+      ],
+      "level": 1,
+      "position": "NONE",
+      "rawChampionName": "game_character_displayname_Jade_Amumu",
+      "runes": null,
+      "scores": {"assists": 0, "creepScore": 0, "deaths": 0, "kills": 0, "wardScore": 0.0},
+      "skinID": 0,
+      "summonerSpells": {
+        "summonerSpellOne": {"displayName": "Fortify"},
+        "summonerSpellTwo": {"displayName": "Rally"}
+      },
+      "team": "ORDER"
+    }
+  ],
+  "events": {"Events": [{"EventID": 0, "EventName": "GameStart", "EventTime": 0.0084}]},
+  "gameData": {"gameMode": "JADE", "gameTime": 22.5565, "mapName": "Map453", "mapNumber": 453, "mapTerrain": "Default"}
+}

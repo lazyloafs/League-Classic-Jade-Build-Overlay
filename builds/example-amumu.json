@@ -1,0 +1,44 @@
+{
+  "id": "example-amumu",
+  "name": "Example tank (edit me)",
+  "champion": "Amumu",
+  "notes": "Starter example so the overlay has something to show.",
+  "steps": [
+    {
+      "itemId": 771054,
+      "count": 1,
+      "note": ""
+    },
+    {
+      "itemId": 772009,
+      "count": 2,
+      "note": ""
+    },
+    {
+      "itemId": 773009,
+      "count": 1,
+      "note": ""
+    },
+    {
+      "itemId": 773068,
+      "count": 1,
+      "note": ""
+    },
+    {
+      "itemId": 773143,
+      "count": 1,
+      "note": ""
+    },
+    {
+      "itemId": 773075,
+      "count": 1,
+      "note": ""
+    },
+    {
+      "itemId": 773083,
+      "count": 1,
+      "note": ""
+    }
+  ],
+  "updated": "2026-09-28T21:41:13.077Z"
+}
