@@ -1,0 +1,780 @@
+{
+ "mode": "stacked",
+ "assumptions": {
+  "TANK": {
+   "hp": 2100,
+   "armor": 100,
+   "mr": 50
+  },
+  "CARRY": {
+   "ad": 100,
+   "as": 0.7,
+   "hp": 1800,
+   "mana": 500
+  },
+  "TARGET": {
+   "hp": 2500,
+   "armor": 100,
+   "mr": 60
+  },
+  "AS_CAP": 2.5
+ },
+ "results": {
+  "Tank vs physical": {
+   "unit": "effective HP",
+   "poolSize": 42,
+   "builds": {
+    "1": [
+     {
+      "v": 7020.000000000001,
+      "items": [
+       "Randuin's Omen"
+      ],
+      "cost": 3125
+     },
+     {
+      "v": 6870.588235294118,
+      "items": [
+       "Leviathan"
+      ],
+      "cost": 1275
+     },
+     {
+      "v": 6825,
+      "items": [
+       "Guardian Angel"
+      ],
+      "cost": 2750
+     }
+    ],
+    "2": [
+     {
+      "v": 11164.705882352942,
+      "items": [
+       "Guardian Angel",
+       "Leviathan"
+      ],
+      "cost": 4025
+     },
+     {
+      "v": 10863.529411764706,
+      "items": [
+       "Leviathan",
+       "Randuin's Omen"
+      ],
+      "cost": 4400
+     },
+     {
+      "v": 10816,
+      "items": [
+       "Guardian Angel",
+       "Randuin's Omen"
+      ],
+      "cost": 5875
+     }
+    ],
+    "3": [
+     {
+      "v": 16737.88235294118,
+      "items": [
+       "Guardian Angel",
+       "Leviathan",
+       "Randuin's Omen"
+      ],
+      "cost": 7150
+     },
+     {
+      "v": 15630.588235294119,
+      "items": [
+       "Guardian Angel",
+       "Thornmail",
+       "Leviathan"
+      ],
+      "cost": 6225
+     },
+     {
+      "v": 15407.29411764706,
+      "items": [
+       "Guardian Angel",
+       "Frozen Heart",
+       "Leviathan"
+      ],
+      "cost": 6925
+     }
+    ],
+    "4": [
+     {
+      "v": 21968.470588235297,
+      "items": [
+       "Guardian Angel",
+       "Thornmail",
+       "Leviathan",
+       "Randuin's Omen"
+      ],
+      "cost": 9350
+     },
+     {
+      "v": 21706.94117647059,
+      "items": [
+       "Guardian Angel",
+       "Frozen Heart",
+       "Leviathan",
+       "Randuin's Omen"
+      ],
+      "cost": 10050
+     },
+     {
+      "v": 21603.70588235294,
+      "items": [
+       "Guardian Angel",
+       "Sunfire Cape",
+       "Leviathan",
+       "Randuin's Omen"
+      ],
+      "cost": 9800
+     }
+    ],
+    "5": [
+     {
+      "v": 27878.117647058825,
+      "items": [
+       "Guardian Angel",
+       "Thornmail",
+       "Warmog's Armor",
+       "Leviathan",
+       "Randuin's Omen"
+      ],
+      "cost": 12350
+     },
+     {
+      "v": 27546.23529411765,
+      "items": [
+       "Guardian Angel",
+       "Warmog's Armor",
+       "Frozen Heart",
+       "Leviathan",
+       "Randuin's Omen"
+      ],
+      "cost": 13050
+     },
+     {
+      "v": 27522.52941176471,
+      "items": [
+       "Guardian Angel",
+       "Sunfire Cape",
+       "Thornmail",
+       "Leviathan",
+       "Randuin's Omen"
+      ],
+      "cost": 12000
+     }
+    ],
+    "6": [
+     {
+      "v": 34183.88235294118,
+      "items": [
+       "Guardian Angel",
+       "Thornmail",
+       "Warmog's Armor",
+       "Frozen Heart",
+       "Leviathan",
+       "Randuin's Omen"
+      ],
+      "cost": 15250
+     },
+     {
+      "v": 34065.352941176476,
+      "items": [
+       "Guardian Angel",
+       "Sunfire Cape",
+       "Thornmail",
+       "Warmog's Armor",
+       "Leviathan",
+       "Randuin's Omen"
+      ],
+      "cost": 15000
+     },
+     {
+      "v": 34065.352941176476,
+      "items": [
+       "Guardian Angel",
+       "Thornmail",
+       "Warmog's Armor",
+       "Leviathan",
+       "Randuin's Omen",
+       "Stack of Sunfire Capes"
+      ],
+      "cost": 15350
+     }
+    ]
+   }
+  },
+  "Tank vs magic": {
+   "unit": "effective HP",
+   "poolSize": 42,
+   "builds": {
+    "1": [
+     {
+      "v": 5227.5,
+      "items": [
+       "Banshee's Veil"
+      ],
+      "cost": 2750
+     },
+     {
+      "v": 5187,
+      "items": [
+       "Guardian Angel"
+      ],
+      "cost": 2750
+     },
+     {
+      "v": 5152.941176470588,
+      "items": [
+       "Leviathan"
+      ],
+      "cost": 1275
+     }
+    ],
+    "2": [
+     {
+      "v": 8485.176470588234,
+      "items": [
+       "Guardian Angel",
+       "Leviathan"
+      ],
+      "cost": 4025
+     },
+     {
+      "v": 8127.647058823529,
+      "items": [
+       "Banshee's Veil",
+       "Leviathan"
+      ],
+      "cost": 4025
+     },
+     {
+      "v": 8121.750000000001,
+      "items": [
+       "Guardian Angel",
+       "Banshee's Veil"
+      ],
+      "cost": 5500
+     }
+    ],
+    "3": [
+     {
+      "v": 12627.588235294119,
+      "items": [
+       "Guardian Angel",
+       "Banshee's Veil",
+       "Leviathan"
+      ],
+      "cost": 6775
+     },
+     {
+      "v": 12440.235294117649,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Leviathan"
+      ],
+      "cost": 6775
+     },
+     {
+      "v": 11879.24705882353,
+      "items": [
+       "Guardian Angel",
+       "Leviathan",
+       "Force of Nature"
+      ],
+      "cost": 6635
+     }
+    ],
+    "4": [
+     {
+      "v": 17297.64705882353,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Banshee's Veil",
+       "Leviathan"
+      ],
+      "cost": 9525
+     },
+     {
+      "v": 16544.717647058824,
+      "items": [
+       "Guardian Angel",
+       "Banshee's Veil",
+       "Leviathan",
+       "Force of Nature"
+      ],
+      "cost": 9385
+     },
+     {
+      "v": 16299.24705882353,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Leviathan",
+       "Force of Nature"
+      ],
+      "cost": 9385
+     }
+    ],
+    "5": [
+     {
+      "v": 21679.717647058824,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Banshee's Veil",
+       "Leviathan",
+       "Force of Nature"
+      ],
+      "cost": 12135
+     },
+     {
+      "v": 21518.823529411766,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Warmog's Armor",
+       "Banshee's Veil",
+       "Leviathan"
+      ],
+      "cost": 12525
+     },
+     {
+      "v": 21061.376470588235,
+      "items": [
+       "Guardian Angel",
+       "Warmog's Armor",
+       "Banshee's Veil",
+       "Leviathan",
+       "Force of Nature"
+      ],
+      "cost": 12385
+     }
+    ],
+    "6": [
+     {
+      "v": 26970.25882352941,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Warmog's Armor",
+       "Banshee's Veil",
+       "Leviathan",
+       "Force of Nature"
+      ],
+      "cost": 15135
+     },
+     {
+      "v": 25705.1294117647,
+      "items": [
+       "Frozen Mallet",
+       "Guardian Angel",
+       "Spirit Visage",
+       "Banshee's Veil",
+       "Leviathan",
+       "Force of Nature"
+      ],
+      "cost": 15435
+     },
+     {
+      "v": 25417.6,
+      "items": [
+       "Guardian Angel",
+       "Rod of Ages",
+       "Spirit Visage",
+       "Banshee's Veil",
+       "Leviathan",
+       "Force of Nature"
+      ],
+      "cost": 14935
+     }
+    ]
+   }
+  },
+  "DPS with crit": {
+   "unit": "DPS",
+   "poolSize": 30,
+   "builds": {
+    "1": [
+     {
+      "v": 129.85,
+      "items": [
+       "Madred's Bloodrazor"
+      ],
+      "cost": 3800
+     },
+     {
+      "v": 97.99999999999999,
+      "items": [
+       "Blade of The Ruined King"
+      ],
+      "cost": 3200
+     },
+     {
+      "v": 81.8125,
+      "items": [
+       "Infinity Edge"
+      ],
+      "cost": 3800
+     }
+    ],
+    "2": [
+     {
+      "v": 229.95,
+      "items": [
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 7000
+     },
+     {
+      "v": 204.15499999999997,
+      "items": [
+       "Phantom Dancer",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 6600
+     },
+     {
+      "v": 202.73749999999998,
+      "items": [
+       "Infinity Edge",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 7600
+     }
+    ],
+    "3": [
+     {
+      "v": 337.98625,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 10400
+     },
+     {
+      "v": 333.67249999999996,
+      "items": [
+       "Phantom Dancer",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 9800
+     },
+     {
+      "v": 329.56875,
+      "items": [
+       "Infinity Edge",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 10800
+     }
+    ],
+    "4": [
+     {
+      "v": 506.24437499999993,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 13600
+     },
+     {
+      "v": 479.98125,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "Statikk Shiv",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 12900
+     },
+     {
+      "v": 476.34125,
+      "items": [
+       "Infinity Edge",
+       "Statikk Shiv",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 13300
+     }
+    ],
+    "5": [
+     {
+      "v": 684.534375,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "Statikk Shiv",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 16100
+     },
+     {
+      "v": 681.3227272727272,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "The Black Cleaver",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 16600
+     },
+     {
+      "v": 668.15,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "Statikk Shiv",
+       "Sword of the Occult",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 14100
+     }
+    ],
+    "6": [
+     {
+      "v": 921.375,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "The Black Cleaver",
+       "Statikk Shiv",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 19100
+     },
+     {
+      "v": 905.4281249999999,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "Statikk Shiv",
+       "Sword of the Occult",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 17300
+     },
+     {
+      "v": 900.9060344827586,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "The Black Cleaver",
+       "Youmuu's Ghostblade",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 19300
+     }
+    ]
+   }
+  },
+  "DPS without crit": {
+   "unit": "DPS",
+   "poolSize": 30,
+   "builds": {
+    "1": [
+     {
+      "v": 129.85,
+      "items": [
+       "Madred's Bloodrazor"
+      ],
+      "cost": 3800
+     },
+     {
+      "v": 97.99999999999999,
+      "items": [
+       "Blade of The Ruined King"
+      ],
+      "cost": 3200
+     },
+     {
+      "v": 74.725,
+      "items": [
+       "Wit's End"
+      ],
+      "cost": 2150
+     }
+    ],
+    "2": [
+     {
+      "v": 229.95,
+      "items": [
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 7000
+     },
+     {
+      "v": 202.20156249999997,
+      "items": [
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 5750
+     },
+     {
+      "v": 200.025,
+      "items": [
+       "Wit's End",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 5950
+     }
+    ],
+    "3": [
+     {
+      "v": 325.2703125,
+      "items": [
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 8950
+     },
+     {
+      "v": 321.475,
+      "items": [
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 9150
+     },
+     {
+      "v": 319.375,
+      "items": [
+       "Runaan's Hurricane",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 9400
+     }
+    ],
+    "4": [
+     {
+      "v": 431.45156249999997,
+      "items": [
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 11100
+     },
+     {
+      "v": 424.26562499999994,
+      "items": [
+       "Runaan's Hurricane",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 11350
+     },
+     {
+      "v": 423.76249999999993,
+      "items": [
+       "Runaan's Hurricane",
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 11550
+     }
+    ],
+    "5": [
+     {
+      "v": 543.3093749999999,
+      "items": [
+       "Runaan's Hurricane",
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 13500
+     },
+     {
+      "v": 541.356534090909,
+      "items": [
+       "The Black Cleaver",
+       "Runaan's Hurricane",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 14350
+     },
+     {
+      "v": 539.7656249999999,
+      "items": [
+       "Runaan's Hurricane",
+       "Sword of the Occult",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 12550
+     }
+    ],
+    "6": [
+     {
+      "v": 681.356534090909,
+      "items": [
+       "The Black Cleaver",
+       "Runaan's Hurricane",
+       "Sword of the Occult",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 15550
+     },
+     {
+      "v": 676.0124053030303,
+      "items": [
+       "The Black Cleaver",
+       "Runaan's Hurricane",
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 16500
+     },
+     {
+      "v": 674.209375,
+      "items": [
+       "Runaan's Hurricane",
+       "Wit's End",
+       "Sword of the Occult",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 14700
+     }
+    ]
+   }
+  }
+ }
+}

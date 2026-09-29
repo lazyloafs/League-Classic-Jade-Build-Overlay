@@ -1,0 +1,780 @@
+{
+ "mode": "base",
+ "assumptions": {
+  "TANK": {
+   "hp": 2100,
+   "armor": 100,
+   "mr": 50
+  },
+  "CARRY": {
+   "ad": 100,
+   "as": 0.7,
+   "hp": 1800,
+   "mana": 500
+  },
+  "TARGET": {
+   "hp": 2500,
+   "armor": 100,
+   "mr": 60
+  },
+  "AS_CAP": 2.5
+ },
+ "results": {
+  "Tank vs physical": {
+   "unit": "effective HP",
+   "poolSize": 42,
+   "builds": {
+    "1": [
+     {
+      "v": 7020.000000000001,
+      "items": [
+       "Randuin's Omen"
+      ],
+      "cost": 3125
+     },
+     {
+      "v": 6825,
+      "items": [
+       "Guardian Angel"
+      ],
+      "cost": 2750
+     },
+     {
+      "v": 6300,
+      "items": [
+       "Thornmail"
+      ],
+      "cost": 2200
+     }
+    ],
+    "2": [
+     {
+      "v": 10816,
+      "items": [
+       "Guardian Angel",
+       "Randuin's Omen"
+      ],
+      "cost": 5875
+     },
+     {
+      "v": 9815,
+      "items": [
+       "Guardian Angel",
+       "Warmog's Armor"
+      ],
+      "cost": 5750
+     },
+     {
+      "v": 9779.25,
+      "items": [
+       "Guardian Angel",
+       "Sunfire Cape"
+      ],
+      "cost": 5400
+     }
+    ],
+    "3": [
+     {
+      "v": 14643.2,
+      "items": [
+       "Guardian Angel",
+       "Warmog's Armor",
+       "Randuin's Omen"
+      ],
+      "cost": 8875
+     },
+     {
+      "v": 14472.25,
+      "items": [
+       "Guardian Angel",
+       "Sunfire Cape",
+       "Randuin's Omen"
+      ],
+      "cost": 8525
+     },
+     {
+      "v": 14472.25,
+      "items": [
+       "Guardian Angel",
+       "Randuin's Omen",
+       "Stack of Sunfire Capes"
+      ],
+      "cost": 8875
+     }
+    ],
+    "4": [
+     {
+      "v": 19219.2,
+      "items": [
+       "Guardian Angel",
+       "Thornmail",
+       "Warmog's Armor",
+       "Randuin's Omen"
+      ],
+      "cost": 11075
+     },
+     {
+      "v": 18990.4,
+      "items": [
+       "Guardian Angel",
+       "Warmog's Armor",
+       "Frozen Heart",
+       "Randuin's Omen"
+      ],
+      "cost": 11775
+     },
+     {
+      "v": 18837.649999999998,
+      "items": [
+       "Guardian Angel",
+       "Sunfire Cape",
+       "Warmog's Armor",
+       "Randuin's Omen"
+      ],
+      "cost": 11525
+     }
+    ],
+    "5": [
+     {
+      "v": 23998.65,
+      "items": [
+       "Guardian Angel",
+       "Sunfire Cape",
+       "Thornmail",
+       "Warmog's Armor",
+       "Randuin's Omen"
+      ],
+      "cost": 13725
+     },
+     {
+      "v": 23998.65,
+      "items": [
+       "Guardian Angel",
+       "Thornmail",
+       "Warmog's Armor",
+       "Randuin's Omen",
+       "Stack of Sunfire Capes"
+      ],
+      "cost": 14075
+     },
+     {
+      "v": 23740.6,
+      "items": [
+       "Guardian Angel",
+       "Sunfire Cape",
+       "Warmog's Armor",
+       "Frozen Heart",
+       "Randuin's Omen"
+      ],
+      "cost": 14425
+     }
+    ],
+    "6": [
+     {
+      "v": 28901.6,
+      "items": [
+       "Guardian Angel",
+       "Sunfire Cape",
+       "Thornmail",
+       "Warmog's Armor",
+       "Frozen Heart",
+       "Randuin's Omen"
+      ],
+      "cost": 16625
+     },
+     {
+      "v": 28901.6,
+      "items": [
+       "Guardian Angel",
+       "Thornmail",
+       "Warmog's Armor",
+       "Frozen Heart",
+       "Randuin's Omen",
+       "Stack of Sunfire Capes"
+      ],
+      "cost": 16975
+     },
+     {
+      "v": 28252.9,
+      "items": [
+       "Frozen Mallet",
+       "Guardian Angel",
+       "Thornmail",
+       "Warmog's Armor",
+       "Frozen Heart",
+       "Randuin's Omen"
+      ],
+      "cost": 17275
+     }
+    ]
+   }
+  },
+  "Tank vs magic": {
+   "unit": "effective HP",
+   "poolSize": 42,
+   "builds": {
+    "1": [
+     {
+      "v": 5227.5,
+      "items": [
+       "Banshee's Veil"
+      ],
+      "cost": 2750
+     },
+     {
+      "v": 5187,
+      "items": [
+       "Guardian Angel"
+      ],
+      "cost": 2750
+     },
+     {
+      "v": 5125,
+      "items": [
+       "Spirit Visage"
+      ],
+      "cost": 2750
+     }
+    ],
+    "2": [
+     {
+      "v": 8121.750000000001,
+      "items": [
+       "Guardian Angel",
+       "Banshee's Veil"
+      ],
+      "cost": 5500
+     },
+     {
+      "v": 7962.500000000001,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage"
+      ],
+      "cost": 5500
+     },
+     {
+      "v": 7670,
+      "items": [
+       "Spirit Visage",
+       "Banshee's Veil"
+      ],
+      "cost": 5500
+     }
+    ],
+    "3": [
+     {
+      "v": 11505,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Banshee's Veil"
+      ],
+      "cost": 8250
+     },
+     {
+      "v": 11051.95,
+      "items": [
+       "Guardian Angel",
+       "Warmog's Armor",
+       "Banshee's Veil"
+      ],
+      "cost": 8500
+     },
+     {
+      "v": 10892.7,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Warmog's Armor"
+      ],
+      "cost": 8500
+     }
+    ],
+    "4": [
+     {
+      "v": 15093,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Warmog's Armor",
+       "Banshee's Veil"
+      ],
+      "cost": 11250
+     },
+     {
+      "v": 14480.31,
+      "items": [
+       "Guardian Angel",
+       "Warmog's Armor",
+       "Banshee's Veil",
+       "Force of Nature"
+      ],
+      "cost": 11110
+     },
+     {
+      "v": 14419.599999999999,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Banshee's Veil",
+       "Force of Nature"
+      ],
+      "cost": 10860
+     }
+    ],
+    "5": [
+     {
+      "v": 18916.559999999998,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Warmog's Armor",
+       "Banshee's Veil",
+       "Force of Nature"
+      ],
+      "cost": 13860
+     },
+     {
+      "v": 17889.3,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Warmog's Armor",
+       "Banshee's Veil",
+       "Runic Bulwark"
+      ],
+      "cost": 14200
+     },
+     {
+      "v": 17841.2,
+      "items": [
+       "Frozen Mallet",
+       "Guardian Angel",
+       "Spirit Visage",
+       "Banshee's Veil",
+       "Force of Nature"
+      ],
+      "cost": 14160
+     }
+    ],
+    "6": [
+     {
+      "v": 22338.16,
+      "items": [
+       "Frozen Mallet",
+       "Guardian Angel",
+       "Spirit Visage",
+       "Warmog's Armor",
+       "Banshee's Veil",
+       "Force of Nature"
+      ],
+      "cost": 17160
+     },
+     {
+      "v": 22009.260000000002,
+      "items": [
+       "Guardian Angel",
+       "Spirit Visage",
+       "Warmog's Armor",
+       "Banshee's Veil",
+       "Runic Bulwark",
+       "Force of Nature"
+      ],
+      "cost": 16810
+     },
+     {
+      "v": 21458.32,
+      "items": [
+       "Guardian Angel",
+       "Soul Shroud",
+       "Spirit Visage",
+       "Warmog's Armor",
+       "Banshee's Veil",
+       "Force of Nature"
+      ],
+      "cost": 16145
+     }
+    ]
+   }
+  },
+  "DPS with crit": {
+   "unit": "DPS",
+   "poolSize": 30,
+   "builds": {
+    "1": [
+     {
+      "v": 129.85,
+      "items": [
+       "Madred's Bloodrazor"
+      ],
+      "cost": 3800
+     },
+     {
+      "v": 97.99999999999999,
+      "items": [
+       "Blade of The Ruined King"
+      ],
+      "cost": 3200
+     },
+     {
+      "v": 81.8125,
+      "items": [
+       "Infinity Edge"
+      ],
+      "cost": 3800
+     }
+    ],
+    "2": [
+     {
+      "v": 229.95,
+      "items": [
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 7000
+     },
+     {
+      "v": 204.15499999999997,
+      "items": [
+       "Phantom Dancer",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 6600
+     },
+     {
+      "v": 202.73749999999998,
+      "items": [
+       "Infinity Edge",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 7600
+     }
+    ],
+    "3": [
+     {
+      "v": 337.98625,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 10400
+     },
+     {
+      "v": 333.67249999999996,
+      "items": [
+       "Phantom Dancer",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 9800
+     },
+     {
+      "v": 329.56875,
+      "items": [
+       "Infinity Edge",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 10800
+     }
+    ],
+    "4": [
+     {
+      "v": 506.24437499999993,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 13600
+     },
+     {
+      "v": 479.98125,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "Statikk Shiv",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 12900
+     },
+     {
+      "v": 476.34125,
+      "items": [
+       "Infinity Edge",
+       "Statikk Shiv",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 13300
+     }
+    ],
+    "5": [
+     {
+      "v": 684.534375,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "Statikk Shiv",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 16100
+     },
+     {
+      "v": 681.3227272727272,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "The Black Cleaver",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 16600
+     },
+     {
+      "v": 663.5151515151515,
+      "items": [
+       "Infinity Edge",
+       "Last Whisper",
+       "Phantom Dancer",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 15900
+     }
+    ],
+    "6": [
+     {
+      "v": 921.375,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "The Black Cleaver",
+       "Statikk Shiv",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 19100
+     },
+     {
+      "v": 900.9060344827586,
+      "items": [
+       "Infinity Edge",
+       "Phantom Dancer",
+       "The Black Cleaver",
+       "Youmuu's Ghostblade",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 19300
+     },
+     {
+      "v": 897.0340909090909,
+      "items": [
+       "Infinity Edge",
+       "Last Whisper",
+       "Phantom Dancer",
+       "Statikk Shiv",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 18400
+     }
+    ]
+   }
+  },
+  "DPS without crit": {
+   "unit": "DPS",
+   "poolSize": 30,
+   "builds": {
+    "1": [
+     {
+      "v": 129.85,
+      "items": [
+       "Madred's Bloodrazor"
+      ],
+      "cost": 3800
+     },
+     {
+      "v": 97.99999999999999,
+      "items": [
+       "Blade of The Ruined King"
+      ],
+      "cost": 3200
+     },
+     {
+      "v": 74.725,
+      "items": [
+       "Wit's End"
+      ],
+      "cost": 2150
+     }
+    ],
+    "2": [
+     {
+      "v": 229.95,
+      "items": [
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 7000
+     },
+     {
+      "v": 202.20156249999997,
+      "items": [
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 5750
+     },
+     {
+      "v": 200.025,
+      "items": [
+       "Wit's End",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 5950
+     }
+    ],
+    "3": [
+     {
+      "v": 325.2703125,
+      "items": [
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 8950
+     },
+     {
+      "v": 321.475,
+      "items": [
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 9150
+     },
+     {
+      "v": 319.375,
+      "items": [
+       "Runaan's Hurricane",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 9400
+     }
+    ],
+    "4": [
+     {
+      "v": 431.45156249999997,
+      "items": [
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 11100
+     },
+     {
+      "v": 424.26562499999994,
+      "items": [
+       "Runaan's Hurricane",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 11350
+     },
+     {
+      "v": 423.76249999999993,
+      "items": [
+       "Runaan's Hurricane",
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 11550
+     }
+    ],
+    "5": [
+     {
+      "v": 543.3093749999999,
+      "items": [
+       "Runaan's Hurricane",
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 13500
+     },
+     {
+      "v": 541.356534090909,
+      "items": [
+       "The Black Cleaver",
+       "Runaan's Hurricane",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 14350
+     },
+     {
+      "v": 539.3499999999999,
+      "items": [
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Zephyr",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 13950
+     }
+    ],
+    "6": [
+     {
+      "v": 676.0124053030303,
+      "items": [
+       "The Black Cleaver",
+       "Runaan's Hurricane",
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 16500
+     },
+     {
+      "v": 671.7250844594593,
+      "items": [
+       "Last Whisper",
+       "The Black Cleaver",
+       "Runaan's Hurricane",
+       "Blade of The Ruined King",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 16650
+     },
+     {
+      "v": 670.1863636363636,
+      "items": [
+       "The Black Cleaver",
+       "Wit's End",
+       "Blade of The Ruined King",
+       "Zephyr",
+       "Ionic Spark",
+       "Madred's Bloodrazor"
+      ],
+      "cost": 16950
+     }
+    ]
+   }
+  }
+ }
+}
