@@ -6,10 +6,8 @@ const { poll, parseGame } = require('./poller');
 const { indexItems, evaluate } = require('./engine');
 
 const ROOT = path.join(__dirname, '..');
-const DATA_DIR = path.join(ROOT, 'data');
-const BUILDS_DIR = path.join(ROOT, 'builds');
-const CONFIG_PATH = path.join(ROOT, 'config.json');
-const SELECT_PATH = path.join(ROOT, 'selections.json');
+const DATA_DIR = path.join(ROOT, 'data');       // bundled, read-only game data
+const SEED_BUILDS_DIR = path.join(ROOT, 'builds'); // bundled example build(s)
 
 const DEFAULT_CONFIG = {
   port: 17600,
@@ -30,11 +28,26 @@ const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 const safeId = (s) => typeof s === 'string' && /^[A-Za-z0-9_-]{1,80}$/.test(s);
 
 function start(opts = {}) {
+  // Writable state (builds, settings). In the packaged app this is the per-user app-data
+  // folder, because the install folder is read-only; when run from source it's the project folder.
+  const USER = opts.userDir || ROOT;
+  const BUILDS_DIR = path.join(USER, 'builds');
+  const CONFIG_PATH = path.join(USER, 'config.json');
+  const SELECT_PATH = path.join(USER, 'selections.json');
+  fs.mkdirSync(USER, { recursive: true });
+  const firstRun = !fs.existsSync(CONFIG_PATH);
+
   const config = Object.assign({}, DEFAULT_CONFIG, readJson(CONFIG_PATH, {}));
   config.overlay = Object.assign({}, DEFAULT_CONFIG.overlay, config.overlay);
   config.hotkeys = Object.assign({}, DEFAULT_CONFIG.hotkeys, config.hotkeys);
   if (!fs.existsSync(CONFIG_PATH)) writeJson(CONFIG_PATH, config);
   fs.mkdirSync(BUILDS_DIR, { recursive: true });
+  if (USER !== ROOT && !fs.readdirSync(BUILDS_DIR).some((f) => f.endsWith('.json'))) {
+    // First launch of the packaged app: copy in the example build so the overlay has something to show.
+    for (const f of fs.existsSync(SEED_BUILDS_DIR) ? fs.readdirSync(SEED_BUILDS_DIR) : []) {
+      if (f.endsWith('.json')) fs.copyFileSync(path.join(SEED_BUILDS_DIR, f), path.join(BUILDS_DIR, f));
+    }
+  }
 
   const items = readJson(path.join(DATA_DIR, 'jade-items.json'), { items: [] }).items;
   const champions = readJson(path.join(DATA_DIR, 'jade-champions.json'), { champions: [] }).champions;
@@ -205,6 +218,9 @@ function start(opts = {}) {
 
   return {
     port,
+    userDir: USER,
+    buildsDir: BUILDS_DIR,
+    firstRun,
     config,
     saveConfig: () => writeJson(CONFIG_PATH, config),
     close: () => { clearInterval(timer); server.close(); for (const c of clients) c.end(); },

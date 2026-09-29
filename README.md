@@ -14,7 +14,7 @@
 <p align="center">
   <a href="https://github.com/lazyloafs/League-Classic-Jade-Build-Overlay/releases/latest"><img src="https://img.shields.io/github/v/release/lazyloafs/League-Classic-Jade-Build-Overlay?style=flat-square&label=download&color=3fbf9b" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/platform-Windows-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Platform: Windows">
-  <img src="https://img.shields.io/badge/Node.js-20%2B-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js 20+">
+  <img src="https://img.shields.io/badge/no_install_needed-portable_.exe-339933?style=flat-square" alt="Portable exe, no Node.js needed">
   <img src="https://img.shields.io/badge/Electron-overlay-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron overlay">
   <img src="https://img.shields.io/badge/game_mode-League_Classic_(JADE)-c8aa6e?style=flat-square" alt="League Classic (JADE)">
 </p>
@@ -58,16 +58,22 @@
 
 ## Quick start
 
-**Requirements:** Windows, [Node.js 20+](https://nodejs.org), and League of Legends set to **Borderless** window mode (overlays can't draw over exclusive fullscreen).
+**Requirements:** Windows, and League of Legends set to **Borderless** window mode (overlays can't draw over exclusive fullscreen).
 
-1. Download the latest zip from the [**Releases page**](https://github.com/lazyloafs/League-Classic-Jade-Build-Overlay/releases/latest) and unzip it.
-2. Double-click **`start.bat`**. The first run installs packages, then it opens the build editor at `http://127.0.0.1:17600` and starts the overlay.
-3. In the web app, create a build for your champion and press **Use in overlay**.
+### Option 1: Installer or portable app (recommended, no Node.js needed)
+
+1. Download from the [**Releases page**](https://github.com/lazyloafs/League-Classic-Jade-Build-Overlay/releases/latest):
+   - **`Jade-Overlay-Setup-x.y.z.exe`** installs it with a desktop shortcut, or
+   - **`Jade-Overlay-Portable-x.y.z.exe`** runs from anywhere with no install.
+2. Run it. On first launch the build editor opens in your browser, and Jade Overlay lives in your system tray (right-click it for the menu).
+3. In the editor, create a build for your champion and press **Use in overlay**.
 4. Start a League Classic match. The overlay appears on the left of your game.
 
-Only want the editor? Run `npm install` then `npm run web`. Want to try it without a match? Run `npm run mock` or use the **Test** tab.
+> Windows may show a "Windows protected your PC" (SmartScreen) message because the app isn't code-signed. Click **More info**, then **Run anyway**. You can inspect everything: the source is in this repo, and the `.exe` is built from it by GitHub Actions.
 
-Or clone it:
+### Option 2: Run from source
+
+Needs [Node.js 20+](https://nodejs.org).
 
 ```bash
 git clone https://github.com/lazyloafs/League-Classic-Jade-Build-Overlay.git
@@ -76,9 +82,13 @@ npm install
 npm start
 ```
 
+Or unzip a source release and double-click **`start.bat`**. Only want the editor? Run `npm run web` and open `http://127.0.0.1:17600`. Want to try it without a match? Run `npm run mock` or use the **Test** tab.
+
+To build the installer yourself: `npm run dist` (output in `dist/`).
+
 ## Hotkeys
 
-Change any of these in `config.json` (created on first run).
+Change any of these in `config.json` (in your builds/settings folder, created on first run). The tray icon menu has the same actions.
 
 | Key | Action |
 | --- | --- |
@@ -108,11 +118,17 @@ Jade only draws on top of the game and reads Riot's documented local Live Client
 **Why doesn't the overlay show up?**
 Set League to **Borderless** (Settings → Video → Window Mode). If the strip is in the wrong spot, press `F9` to calibrate it. The overlay only shows live data once you're loaded into a match.
 
+**Do I need to install Node.js?**
+Not with the installer or portable `.exe`, which bundle everything. Node.js is only needed to run from source.
+
+**Why does Windows warn about the download?**
+The app isn't code-signed (certificates cost money), so SmartScreen shows an "unknown publisher" prompt. Choose *More info*, then *Run anyway*. The source is public and the `.exe` is built from it on GitHub.
+
 **Does it work on Mac or Linux?**
 The web app runs anywhere Node runs. The overlay is built and set up for Windows.
 
 **Where are my builds saved?**
-In the `builds/` folder as one JSON file per build, so they're easy to back up or share.
+As one JSON file per build, so they're easy to back up or share. With the installer or portable app they're in `%APPDATA%\jade-overlay\builds` (tray menu, *Open builds folder*). Running from source, they're in the project's `builds/` folder.
 
 **Can I use it for the regular Summoner's Rift game?**
 Jade targets League Classic. In other modes the overlay tells you it isn't League Classic.
@@ -120,6 +136,7 @@ Jade targets League Classic. In other modes the overlay tells you it isn't Leagu
 ## Project layout
 
 ```
+build/     app icons
 server/    engine.js (next-item logic), poller.js (Live Client API), index.js (API + live stream)
 web/       build editor
 overlay/   overlay strip (UI) + Electron shell

@@ -2,13 +2,22 @@
 // Electron shell: a transparent, always-on-top, click-through window placed over the
 // left strip of the League window. It does not inject into or read the game; it only
 // draws on top of it, so the game must be in Borderless (or Windowed) mode.
-const { app, BrowserWindow, globalShortcut, ipcMain, clipboard, screen } = require('electron');
+const { app, BrowserWindow, globalShortcut, ipcMain, clipboard, screen, Tray, Menu, nativeImage, shell } = require('electron');
 const path = require('path');
 const { execFile } = require('child_process');
 const { start } = require('../server/index.js');
 
-if (!app.requestSingleInstanceLock()) app.quit();
+app.setAppUserModelId('com.lazyloafs.jade-overlay');
 
+// Only one copy at a time. Launching it again just opens the build editor.
+const gotLock = app.requestSingleInstanceLock();
+if (!gotLock) {
+  app.quit();
+} else {
+  app.on('second-instance', () => openEditor());
+}
+
+let tray = null;
 let win = null;
 let srv = null;
 let gameRect = null;      // League window client area, in DIPs
@@ -122,19 +131,45 @@ function nudge(dx, dy, dw, dh) {
   win.setBounds({ x: b.x + dx, y: b.y + dy, width: Math.max(120, b.width + dw), height: Math.max(200, b.height + dh) });
 }
 
+const editorUrl = () => 'http://127.0.0.1:' + srv.port + '/';
+function openEditor() { if (srv) shell.openExternal(editorUrl()); }
+function toggleVisible() {
+  if (!win) return;
+  visible = !visible;
+  visible ? win.showInactive() : win.hide();
+}
+function buildTray() {
+  const img = nativeImage.createFromPath(path.join(__dirname, '..', 'build', 'tray.png'));
+  tray = new Tray(img.isEmpty() ? nativeImage.createEmpty() : img);
+  tray.setToolTip('Jade Overlay');
+  const hk = srv.config.hotkeys;
+  tray.setContextMenu(Menu.buildFromTemplate([
+    { label: 'Open build editor', click: openEditor },
+    { type: 'separator' },
+    { label: 'Show / hide overlay  (' + hk.toggle + ')', click: toggleVisible },
+    { label: 'Toggle shop mode  (' + hk.shop + ')', click: () => win && win.webContents.send('jade:toggle-shop') },
+    { label: 'Move / resize overlay  (' + hk.calibrate + ')', click: toggleCalibrate },
+    { type: 'separator' },
+    { label: 'Open builds folder', click: () => shell.openPath(srv.buildsDir) },
+    { type: 'separator' },
+    { label: 'Quit Jade Overlay', click: () => app.quit() },
+  ]));
+  tray.on('click', openEditor);
+}
+
 app.whenReady().then(async () => {
-  srv = start({ mock: process.argv.includes('--mock') });
+  if (!gotLock) return;   // a second copy: the first one handles it
+  // Packaged app: keep builds/settings in the per-user app-data folder (the install folder is read-only).
+  srv = start({ mock: process.argv.includes('--mock'), userDir: app.isPackaged ? app.getPath('userData') : undefined });
   gameRect = await findGameRect();
   createWindow();
+  buildTray();
+  if (srv.firstRun) openEditor();   // first launch: show the build editor
 
   const hk = srv.config.hotkeys;
   globalShortcut.register(hk.shop, () => win && win.webContents.send('jade:toggle-shop'));
   globalShortcut.register(hk.calibrate, toggleCalibrate);
-  globalShortcut.register(hk.toggle, () => {
-    if (!win) return;
-    visible = !visible;
-    visible ? win.showInactive() : win.hide();
-  });
+  globalShortcut.register(hk.toggle, toggleVisible);
   globalShortcut.register('Ctrl+Alt+Q', () => app.quit());
 
   ipcMain.on('jade:copy', (_e, text) => clipboard.writeText(String(text).slice(0, 200)));
