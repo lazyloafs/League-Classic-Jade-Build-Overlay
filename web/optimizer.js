@@ -1,5 +1,5 @@
 'use strict';
-// Optimizer tab: sliders -> NSGA-II in a Web Worker -> ranked builds. Uses helpers from app.js (h, api, items, itemMap...).
+// Optimizer tab: sliders -> search in a Web Worker -> ranked builds. Uses helpers from app.js (h, api, items, itemMap...).
 (function () {
   const OBJ = JadeModel.OBJECTIVES;
   const PRESETS = [
@@ -74,7 +74,7 @@
       const champ = $('#champFilter').value || (champions[0] && champions[0].name) || '';
       const id = 'build-' + Date.now().toString(36);
       const label = OBJ.filter((o) => w[o.key] > 0).map((o) => o.label).join(' + ');
-      const b = await api('/api/builds/' + id, 'PUT', { name: 'Optimizer: ' + label.slice(0, 60), champion: champ, notes: 'Found by the Optimizer tab (NSGA-II). Sliders: ' + OBJ.map((o) => o.label + ' ' + w[o.key]).join(', '),
+      const b = await api('/api/builds/' + id, 'PUT', { name: 'Optimizer: ' + label.slice(0, 60), champion: champ, notes: 'Found by the Optimizer tab. Sliders: ' + OBJ.map((o) => o.label + ' ' + w[o.key]).join(', '),
         steps: its.map((it) => ({ itemId: it.id, count: 1, note: '' })) });
       builds.push(b); showTab('builds'); selectBuild(id);
     } catch (e) { btn.disabled = false; btn.textContent = 'Save failed'; }

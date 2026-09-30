@@ -1,5 +1,5 @@
 'use strict';
-// Shared item/scoring model used by tools/nsga2.js (the exhaustive tools/optimize.js keeps its own copy).
+// Shared item/scoring model used by tools/pareto.js (the exhaustive tools/optimize.js keeps its own copy).
 const fs = require('fs');
 const path = require('path');
 const ITEMS = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'jade-items.json'), 'utf8')).items;

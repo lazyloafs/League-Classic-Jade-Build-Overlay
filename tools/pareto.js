@@ -1,5 +1,5 @@
 'use strict';
-// NSGA-II over 6-item builds: maximise defense, maximise DPS, minimise gold. Run: node tools/nsga2.js
+// Multi-objective search over 6-item builds: maximise defense, maximise DPS, minimise gold. Run: node tools/pareto.js
 const fs = require('fs');
 const path = require('path');
 const { pool, ARCH, TARGET, evaluate } = require('./model');
@@ -72,4 +72,4 @@ for (const name of Object.keys(ARCH)) {
   const mx = (k) => Math.max(...front.map((x) => x.e[k]));
   console.log(name, 'front', front.length, 'maxDef', Math.round(mx('defense')), 'maxDps', Math.round(mx('dps')), ((Date.now() - t) / 1000).toFixed(0) + 's');
 }
-fs.writeFileSync(path.join(__dirname, 'nsga2-fronts.json'), JSON.stringify(out, null, 1));
+fs.writeFileSync(path.join(__dirname, 'pareto-fronts.json'), JSON.stringify(out, null, 1));

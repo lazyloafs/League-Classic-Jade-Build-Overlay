@@ -3,7 +3,7 @@ const test = require('node:test');
 const assert = require('node:assert');
 const path = require('path');
 const M = require('../web/model.js');
-const N = require('../web/nsga2.js');
+const N = require('../web/search.js');
 const items = require(path.join(__dirname, '..', 'data', 'jade-items.json')).items;
 const model = M.create(items);
 const keys = M.OBJECTIVES.map((o) => o.key);
@@ -26,7 +26,7 @@ test('cooldown reduction is capped at 40%', () => {
   const cd = model.pool.filter((i) => i.cdr > 0).slice(0, 6);
   assert.ok(model.evaluate(cd).cdr <= 0.4);
 });
-test('NSGA-II returns legal, non-dominated builds under the gold cap', () => {
+test('search returns legal, non-dominated builds under the gold cap', () => {
   const front = N.run({ model, size: 6, maxGold: 15000, keys, pop: 80, gens: 40, seed: 3 });
   assert.ok(front.length > 5);
   for (const b of front) { assert.equal(b.idx.length, 6); assert.ok(legal(b.idx)); assert.ok(b.v.cost <= 15000); }

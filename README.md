@@ -46,7 +46,7 @@
 - **"Gold needed" readout** — how much more gold you need, your gold against the item's cost, and the total price with the discount from components you already own.
 - **Recipe-aware** — counts owned components toward a bigger item (the shop deducts them), never counts one component twice, and suggests the best component you can afford right now when you can't afford the whole item.
 - **Multi-stat item filter** — toggle several stats and choose *Match all* or *Match any*; combine with Consumables, Boots, Basic, Epic and Legendary.
-- **Optimizer tab (NSGA-II)** — six sliders (Magic EHP, Armor EHP, DPS with crit, DPS without crit, Ability Power, Cooldown Reduction) say what you want; Jade searches every legal 3-6 item build with a multi-objective genetic algorithm, ranks the best for your mix, and saves any result as a build. Runs in your browser, no server needed.
+- **Optimizer tab** — six sliders (Magic EHP, Armor EHP, DPS with crit, DPS without crit, Ability Power, Cooldown Reduction) say what you want; Jade searches every legal 3-6 item build with a multi-objective genetic algorithm, ranks the best for your mix, and saves any result as a build. Runs in your browser, no server needed.
 - **Item tooltips and recipes** — hover any item for its description, cost, combine cost, and what it builds from and into.
 - **Drag-and-drop build order** with counts (for example 2× Total Biscuit) and per-step notes. Builds autosave as plain JSON files.
 - **Shop mode click-to-copy** — when you're at the shop, click an item in the overlay to copy its name, then paste it in the shop search.
