@@ -122,7 +122,34 @@ select { max-width: 100%; }
 .scene { position: relative; height: 700px; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); background: radial-gradient(circle at 60% 40%, #2c4a3e, #14201c 70%); }
 .scene iframe { position: absolute; left: 1%; top: 3%; width: 180px; height: 660px; border: 1px dashed rgba(255,80,80,.7); background: transparent; }
 
+#view-optimize { display: grid; grid-template-columns: minmax(340px, 420px) 1fr; gap: 16px; align-items: start; }
+.presets { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.sliders { display: grid; gap: 12px; }
+.slider label { display: flex; justify-content: space-between; align-items: baseline; font-weight: 600; }
+.slider label small { color: var(--muted); font-weight: 400; margin-left: 8px; }
+.slider .val { color: var(--gold); font-variant-numeric: tabular-nums; min-width: 28px; text-align: right; }
+.slider input[type=range] { width: 100%; accent-color: var(--jade); margin: 4px 0 0; }
+.optopts { margin-top: 14px; }
+.optopts label { display: flex; gap: 6px; align-items: center; color: var(--muted); }
+.optstatus { margin-top: 6px; }
+.optstatus .bar { height: 4px; background: var(--panel2); border-radius: 2px; overflow: hidden; }
+.optstatus .bar i { display: block; height: 100%; width: 0; background: var(--jade); transition: width .15s; }
+.hint.small { font-size: 12px; margin-top: 10px; }
+.results { display: grid; gap: 10px; }
+.result { background: var(--panel2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+.result:first-child { border-color: var(--gold); }
+.result .head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.result .rk { font-weight: 800; color: var(--gold); min-width: 22px; }
+.result .icons { display: flex; gap: 4px; flex: 1; flex-wrap: wrap; }
+.result .icons img { width: 40px; height: 40px; border-radius: 4px; border: 1px solid #000; }
+.result .names { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+.result .metrics { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 6px; }
+.metric { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; }
+.metric.on { border-color: var(--jade); }
+.metric .k { color: var(--muted); font-size: 11px; }
+.metric .n { font-variant-numeric: tabular-nums; font-weight: 600; }
 @media (max-width: 1100px) {
+  #view-optimize { grid-template-columns: 1fr; }
   .grid3 { grid-template-columns: 1fr; }
   #view-test { grid-template-columns: 1fr; }
 }

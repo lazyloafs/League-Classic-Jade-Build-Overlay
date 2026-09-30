@@ -11,6 +11,7 @@
   <div class="brand">JADE <span>League Classic builds</span></div>
   <nav class="tabs">
     <button data-tab="builds" class="tab active">Builds</button>
+    <button data-tab="optimize" class="tab">Optimizer</button>
     <button data-tab="test" class="tab">Test</button>
   </nav>
   <div id="status" class="status"><span class="dot"></span><span id="statusText">Connecting…</span></div>
@@ -61,6 +62,26 @@
   </section>
 </main>
 
+<main id="view-optimize" class="view" hidden>
+  <section class="panel">
+    <h2>Find the best build</h2>
+    <p class="hint">Drag the sliders to say what matters. Jade searches every legal item combination with NSGA-II (a multi-objective genetic algorithm) and ranks the best builds for your mix. A slider at 0 is ignored.</p>
+    <div class="presets" id="optPresets"></div>
+    <div id="optSliders" class="sliders"></div>
+    <div class="row optopts">
+      <label>Items <select id="optSize"><option>3</option><option>4</option><option>5</option><option selected>6</option></select></label>
+      <label>Max gold <input id="optGold" type="number" class="input num" min="1000" max="30000" step="500" value="20000"></label>
+      <button id="optRun" class="btn primary">Search again</button>
+    </div>
+    <div class="optstatus"><div class="bar"><i id="optBar"></i></div><span id="optStatus" class="hint"></span></div>
+    <p class="hint small">Uses one generic level-18 champion (1900 HP, 80 armor, 45 MR, 90 AD) and counts Guardian Angel as +30% HP. Details in the README.</p>
+  </section>
+  <section class="panel">
+    <h2>Best builds for your sliders</h2>
+    <div id="optResults" class="results"><div class="empty">Loading…</div></div>
+  </section>
+</main>
+
 <main id="view-test" class="view" hidden>
   <section class="panel test">
     <h2>Simulated game</h2>
@@ -92,5 +113,7 @@
 
 <div id="tip" class="tip" hidden></div>
 <script src="app.js"></script>
+<script src="model.js"></script>
+<script src="optimizer.js"></script>
 </body>
 </html>

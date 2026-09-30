@@ -349,6 +349,8 @@ function showTab(name) {
   document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('active', t.dataset.tab === name));
   $('#view-builds').hidden = name !== 'builds';
   $('#view-test').hidden = name !== 'test';
+  $('#view-optimize').hidden = name !== 'optimize';
+  if (name === 'optimize' && window.openOptimizer) window.openOptimizer();
   location.hash = name;
 }
 
@@ -397,6 +399,6 @@ async function init() {
     renderBuildList();
     renderEditor();
   };
-  showTab(location.hash === '#test' ? 'test' : 'builds');
+  showTab(location.hash === '#test' ? 'test' : location.hash === '#optimize' ? 'optimize' : 'builds');
 }
 init().catch((e) => { document.body.prepend(h('pre', { text: 'Failed to load: ' + e.message })); console.error(e); });
