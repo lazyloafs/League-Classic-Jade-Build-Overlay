@@ -256,16 +256,20 @@ async function duplicateBuild() {
   const lane = $('#dupLane').value === 'keep' ? (cur.lane || '') : $('#dupLane').value;
   let n = 0, first = null;
   for (const champion of [...dupPick]) {
-    const same = norm(champion) === norm(cur.champion) && lane === (cur.lane || '');
+    const sameChamp = norm(champion) === norm(cur.champion);
+    // Same champion on another lane: name it after the lane so the copy is easy to tell apart.
+    const suffix = !sameChamp ? '' : lane === (cur.lane || '') ? ' (copy)' : lane ? ' (' + laneLabel(lane) + ')' : ' (any lane)';
     const id = 'build-' + Date.now().toString(36) + (n++).toString(36);
-    const b = await api('/api/builds/' + id, 'PUT', { name: cur.name + (same ? ' (copy)' : ''), champion, lane, notes: cur.notes || '',
+    const b = await api('/api/builds/' + id, 'PUT', { name: cur.name + suffix, champion, lane, notes: cur.notes || '',
       steps: cur.steps.map((s) => ({ itemId: s.itemId, count: s.count, note: s.note || '' })) });
     builds.push(b);
     first = first || b;
   }
   $('#dupDialog').close();
-  renderBuildList();
-  $('#saveState').textContent = 'Copied to ' + n + (n === 1 ? ' champion ✓' : ' champions ✓');
+  const f = $('#champFilter');
+  if (f.value && [...dupPick].some((c) => norm(c) !== norm(f.value))) f.value = '';   // make sure the new copies are visible in the list
+  selectBuild(first.id);   // open the first copy so it's obvious what was made
+  $('#saveState').textContent = n === 1 ? 'Copy created ✓ (now editing it)' : n + ' copies created ✓ (editing the first)';
 }
 
 // ---------- item catalog ----------
