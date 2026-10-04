@@ -37,6 +37,7 @@
         <input id="buildName" class="input grow" placeholder="Build name" maxlength="80">
         <img id="champIcon" class="champ" alt="">
         <select id="buildChamp" aria-label="Champion"></select>
+        <select id="buildLane" aria-label="Lane" title="Lane this build is for. The overlay picks the matching build for your lane."></select>
       </div>
       <h3>Item order <small>(top = buy first · drag to reorder)</small></h3>
       <ol id="steps" class="steps"></ol>
@@ -45,6 +46,7 @@
         <div>Total: <b id="totalCost">0</b> gold · <span id="stepCount">0</span> items</div>
         <div class="row">
           <button id="useBuild" class="btn primary">Use in overlay</button>
+          <button id="dupBuild" class="btn" title="Copy this build to other champions or another lane">Duplicate…</button>
           <button id="deleteBuild" class="btn danger">Delete</button>
           <span id="saveState" class="savestate"></span>
         </div>
@@ -89,6 +91,7 @@
     <label class="check"><input type="checkbox" id="mockEnabled"> Use simulated game</label>
     <div class="fields">
       <label>Champion <select id="mockChamp"></select></label>
+      <label>Lane from the game <select id="mockLane"></select></label>
       <label>Gold <input id="mockGold" type="number" min="0" max="99999" step="25" class="input num"></label>
       <input id="mockGoldRange" type="range" min="0" max="6000" step="25">
       <label>Game time (s) <input id="mockTime" type="number" min="0" step="10" class="input num"></label>
@@ -110,6 +113,17 @@
     <div class="scene"><iframe id="previewFrame" src="/overlay/?embed=1" title="Overlay preview"></iframe></div>
   </section>
 </main>
+
+<dialog id="dupDialog" class="dlg">
+  <h3>Duplicate build</h3>
+  <p class="hint">Copy “<b id="dupName"></b>” to other champions. Pick the same champion with a different lane to make a lane variant.</p>
+  <input id="dupSearch" class="input" placeholder="Search champions…" autocomplete="off">
+  <div id="dupList" class="duplist"></div>
+  <div class="row"><label>Lane for the copies <select id="dupLane"></select></label></div>
+  <div class="row dlgfoot"><span id="dupCount" class="hint"></span>
+    <button id="dupCancel" class="btn" type="button">Cancel</button>
+    <button id="dupGo" class="btn primary" type="button">Create copies</button></div>
+</dialog>
 
 <div id="tip" class="tip" hidden></div>
 <script src="app.js"></script>

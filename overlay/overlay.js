@@ -53,6 +53,21 @@ function goldNeeded(n, have) {
 const shopReady = () => !!state && state.connected && (state.autoShop || manualShop);
 const isPinned = (name) => pinned && pinned.name === name && Date.now() < pinned.until;
 
+// Lane tag next to the build name. Click it (or press the lane hotkey) to switch lane builds when the game doesn't report the lane.
+function laneChip() {
+  const locked = state.laneSource === 'api' || state.laneSource === 'spell';
+  const many = (state.laneOptions || []).length > 1;
+  const text = state.laneLabel || 'Any lane';
+  const note = locked ? ' (auto)' : '';
+  const title = locked ? 'Lane detected from the game' : many ? 'Click to switch lane build' : 'Add lane builds in the web app';
+  return h('span', {
+    class: 'lane' + (state.laneLabel ? ' set' : '') + (!locked && many ? ' clickable' : ''),
+    title,
+    onclick: !locked && many ? () => fetch('/api/lane/cycle', { method: 'POST' }).catch(() => {}) : null,
+    text: text + note,
+  });
+}
+
 function render() {
   strip.classList.toggle('calibrating', calibrating);
   strip.classList.toggle('dim', !state || !state.connected);
@@ -67,12 +82,15 @@ function render() {
   kids.push(h('div', { class: 'hdr' },
     h('div', { class: 'champ', text: state.champion || '—' }),
     h('div', { class: 'gold', text: state.gold.toLocaleString() }),
-    h('div', { class: 'bld', text: state.build ? state.build.name : 'No build' })));
+    h('div', { class: 'bld' }, laneChip(), state.build ? state.build.name : 'No build')));
 
   if (!state.isJade) {
     kids.push(h('div', { class: 'banner' }, 'This isn’t League Classic (mode: ', h('b', { text: state.mode || '?' }), ').'));
   }
 
+  if (state.build && state.lane && !state.laneMatch) {
+    kids.push(h('div', { class: 'banner' }, 'No ', h('b', { text: state.laneLabel }), ' build for this champion yet. Showing the closest one.'));
+  }
   const e = state.eval;
   if (!state.build) {
     kids.push(h('div', { class: 'banner' }, 'No build for ', h('b', { text: state.champion || 'this champion' }), '. Make one in the web app.'));

@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { poll, parseGame } = require('./poller');
 const { indexItems, evaluate } = require('./engine');
+const lanes = require('./lanes');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data');       // bundled, read-only game data
@@ -15,7 +16,7 @@ const DEFAULT_CONFIG = {
   overlay: { x: 0.0055, y: 0.084, w: 0.094, h: 0.63 },
   // Treat the first N seconds of a match as "at the shop" (you start in the fountain).
   autoShopSeconds: 120,
-  hotkeys: { shop: 'F8', calibrate: 'F9', toggle: 'F10' },
+  hotkeys: { shop: 'F8', calibrate: 'F9', toggle: 'F10', lane: 'F7' },
 };
 
 function readJson(file, fallback) {
@@ -34,6 +35,7 @@ function start(opts = {}) {
   const BUILDS_DIR = path.join(USER, 'builds');
   const CONFIG_PATH = path.join(USER, 'config.json');
   const SELECT_PATH = path.join(USER, 'selections.json');
+  const LANES_PATH = path.join(USER, 'lanes.json');
   fs.mkdirSync(USER, { recursive: true });
   const firstRun = !fs.existsSync(CONFIG_PATH);
 
@@ -53,6 +55,7 @@ function start(opts = {}) {
   const champions = readJson(path.join(DATA_DIR, 'jade-champions.json'), { champions: [] }).champions;
   const itemMap = indexItems(items);
   let selections = readJson(SELECT_PATH, {});
+  const lanePrefs = readJson(LANES_PATH, {});   // last lane picked by hand, per champion
 
   // ---- mock game (for testing without a match) ----
   const sample = readJson(path.join(DATA_DIR, 'sample-game.json'), null);
@@ -62,6 +65,7 @@ function start(opts = {}) {
     champion: (sampleParsed && sampleParsed.champion) || 'Amumu',
     gold: (sampleParsed && sampleParsed.gold) || 475,
     isDead: false,
+    lane: '',
     gameTime: 22,
     items: (sampleParsed && sampleParsed.items.map((i) => ({ itemID: i.itemID, count: i.count }))) || [],
   };
@@ -80,15 +84,14 @@ function start(opts = {}) {
     return a === b || a.startsWith(b) || b.startsWith(a);
   }
 
-  function pickBuild(champion) {
-    const builds = listBuilds();
-    const chosen = selections[norm(champion)];
-    if (chosen) {
-      const b = builds.find((x) => x.id === chosen);
-      if (b) return b;
-    }
-    return builds.find((b) => championMatches(b.champion, champion)) || null;
+  // Lane for the current champion: what the game reports (position / Smite) wins, otherwise the one picked by hand.
+  function resolveLane(game) {
+    const detected = mock.enabled ? (mock.lane ? { lane: mock.lane, source: 'api' } : null) : game.detectedLane;
+    if (detected) return detected;
+    const manual = lanes.normalizeLane(lanePrefs[norm(game.champion)]);
+    return manual ? { lane: manual, source: 'manual' } : { lane: '', source: null };
   }
+  const laneOptions = (champion) => lanes.lanesFor(listBuilds(), champion, championMatches);
 
   // ---- live state ----
   let state = { connected: false };
@@ -98,7 +101,10 @@ function start(opts = {}) {
     const game = mock.enabled
       ? { connected: true, mode: 'JADE', gameTime: mock.gameTime, champion: mock.champion, gold: mock.gold, level: 1, isDead: mock.isDead, items: mock.items, mock: true }
       : await poll();
-    const build = game.connected ? pickBuild(game.champion) : null;
+    const L = game.connected ? resolveLane(game) : { lane: '', source: null };
+    const all = game.connected ? listBuilds() : [];
+    const picked = game.connected ? lanes.pickBuild(all, selections, game.champion, L.lane, championMatches) : { build: null, laneMatch: false };
+    const build = picked.build;
     const next = {
       connected: game.connected,
       mock: !!game.mock,
@@ -110,7 +116,12 @@ function start(opts = {}) {
       gameTime: Math.floor(game.gameTime),
       autoShop: game.connected && (game.isDead || game.gameTime < config.autoShopSeconds),
       inventory: game.items,
-      build: build ? { id: build.id, name: build.name } : null,
+      lane: L.lane,
+      laneLabel: L.lane ? lanes.LABELS[L.lane] : '',
+      laneSource: L.source,
+      laneOptions: game.connected ? lanes.lanesFor(all, game.champion, championMatches) : [],
+      laneMatch: picked.laneMatch,
+      build: build ? { id: build.id, name: build.name, lane: build.lane || '' } : null,
       eval: build ? evaluate({ build, inventory: game.items, gold: game.gold, items: itemMap }) : null,
     };
     const changed = JSON.stringify(next) !== JSON.stringify(state);
@@ -157,6 +168,7 @@ function start(opts = {}) {
       id,
       name: String(b.name || 'Untitled build').slice(0, 80),
       champion: String(b.champion || '').slice(0, 40),
+      lane: lanes.normalizeLane(b.lane),
       notes: String(b.notes || '').slice(0, 2000),
       steps: steps
         .filter((s) => itemMap.has(Number(s.itemId)))
@@ -180,10 +192,31 @@ function start(opts = {}) {
     const { champion, buildId } = req.body || {};
     if (!champion) return res.status(400).json({ error: 'champion required' });
     if (buildId && !safeId(buildId)) return res.status(400).json({ error: 'bad id' });
-    if (buildId) selections[norm(champion)] = buildId; else delete selections[norm(champion)];
+    const lane = lanes.normalizeLane((req.body || {}).lane);
+    const key = lanes.selKey(champion, lane);
+    if (!lane) delete selections[norm(champion)];   // older single-build entry
+    if (buildId) selections[key] = buildId; else delete selections[key];
     writeJson(SELECT_PATH, selections);
     tick().catch(() => {});
     res.json({ ok: true });
+  });
+  // Pick the lane by hand (used when the game doesn't report one). lane '' = no lane.
+  const setLane = (champion, lane) => {
+    const k = norm(champion);
+    if (lane) lanePrefs[k] = lane; else delete lanePrefs[k];
+    writeJson(LANES_PATH, lanePrefs);
+  };
+  app.post('/api/lane', (req, res) => {
+    const champion = (req.body && req.body.champion) || state.champion;
+    if (!champion) return res.status(400).json({ error: 'no champion' });
+    setLane(champion, lanes.normalizeLane((req.body || {}).lane));
+    tick().then(() => res.json(state)).catch(() => res.json(state));
+  });
+  app.post('/api/lane/cycle', (req, res) => {
+    if (!state.connected || !state.champion) return res.json(state);
+    if (state.laneSource === 'api' || state.laneSource === 'spell') return res.json(Object.assign({ locked: true }, state));
+    setLane(state.champion, lanes.nextLane(state.lane, laneOptions(state.champion)));
+    tick().then(() => res.json(state)).catch(() => res.json(state));
   });
   app.get('/api/selections', (req, res) => res.json(selections));
 
@@ -200,6 +233,7 @@ function start(opts = {}) {
     const b = req.body || {};
     if (typeof b.enabled === 'boolean') mock.enabled = b.enabled;
     if (typeof b.champion === 'string') mock.champion = b.champion;
+    if (typeof b.lane === 'string') mock.lane = lanes.normalizeLane(b.lane);
     if (typeof b.gold === 'number') mock.gold = Math.max(0, Math.min(99999, b.gold));
     if (typeof b.isDead === 'boolean') mock.isDead = b.isDead;
     if (typeof b.gameTime === 'number') mock.gameTime = Math.max(0, b.gameTime);

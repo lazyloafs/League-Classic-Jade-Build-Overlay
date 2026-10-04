@@ -138,6 +138,11 @@ function toggleVisible() {
   visible = !visible;
   visible ? win.showInactive() : win.hide();
 }
+// Ask the local server to switch to the next lane build (only used when the game doesn't report a lane).
+function cycleLane() {
+  if (!srv) return;
+  fetch('http://127.0.0.1:' + srv.port + '/api/lane/cycle', { method: 'POST' }).catch(() => {});
+}
 function buildTray() {
   const img = nativeImage.createFromPath(path.join(__dirname, '..', 'build', 'tray.png'));
   tray = new Tray(img.isEmpty() ? nativeImage.createEmpty() : img);
@@ -147,6 +152,7 @@ function buildTray() {
     { label: 'Open build editor', click: openEditor },
     { type: 'separator' },
     { label: 'Show / hide overlay  (' + hk.toggle + ')', click: toggleVisible },
+    { label: 'Switch lane build  (' + hk.lane + ')', click: cycleLane },
     { label: 'Toggle shop mode  (' + hk.shop + ')', click: () => win && win.webContents.send('jade:toggle-shop') },
     { label: 'Move / resize overlay  (' + hk.calibrate + ')', click: toggleCalibrate },
     { type: 'separator' },
@@ -170,6 +176,7 @@ app.whenReady().then(async () => {
   globalShortcut.register(hk.shop, () => win && win.webContents.send('jade:toggle-shop'));
   globalShortcut.register(hk.calibrate, toggleCalibrate);
   globalShortcut.register(hk.toggle, toggleVisible);
+  if (hk.lane) globalShortcut.register(hk.lane, cycleLane);
   globalShortcut.register('Ctrl+Alt+Q', () => app.quit());
 
   ipcMain.on('jade:copy', (_e, text) => clipboard.writeText(String(text).slice(0, 200)));

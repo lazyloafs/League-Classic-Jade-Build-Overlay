@@ -1,6 +1,7 @@
 'use strict';
 // Reads the local League Live Client Data API (only exists while a match is running).
 const https = require('https');
+const { detectLane } = require('./lanes');
 
 const BASE = 'https://127.0.0.1:2999/liveclientdata';
 // The game serves a self-signed certificate on localhost only.
@@ -38,6 +39,8 @@ function parseGame(raw) {
     level: ap.level || 1,
     isDead: !!me.isDead,
     items: me.items || [],
+    position: me.position || null,
+    detectedLane: detectLane(me),
   };
 }
 

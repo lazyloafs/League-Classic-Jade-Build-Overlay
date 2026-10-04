@@ -35,6 +35,11 @@ let mock = null;
 let live = null;              // last state from /api/stream
 const tier = new Map();
 
+const LANES = [['', 'Any lane'], ['TOP', 'Top'], ['JUNGLE', 'Jungle'], ['MIDDLE', 'Mid'], ['BOTTOM', 'Bot'], ['UTILITY', 'Support']];
+const laneLabel = (l) => (LANES.find((x) => x[0] === (l || '')) || LANES[0])[1];
+const selKey = (champion, lane) => norm(champion) + '|' + (lane || 'any');
+const inOverlay = (b) => selections[selKey(b.champion, b.lane)] === b.id || (!b.lane && selections[norm(b.champion)] === b.id);
+
 const TYPE_CHIPS = [['all', 'All'], ['Consumable', 'Consumables'], ['Boots', 'Boots'], ['t0', 'Basic'], ['t1', 'Epic'], ['t2', 'Legendary']];
 const STAT_CHIPS = [
   ['Damage', 'Attack Dmg'], ['SpellDamage', 'Ability Power'], ['AttackSpeed', 'Atk Speed'], ['CriticalStrike', 'Crit'],
@@ -97,6 +102,11 @@ function renderChampSelects() {
   fill($('#champFilter'), true, '');
   fill($('#buildChamp'), false, names[0]);
   fill($('#mockChamp'), false, mock && mock.champion);
+  for (const sel of [$('#buildLane'), $('#dupLane'), $('#mockLane')]) {
+    const keep = sel.id === 'dupLane';
+    sel.replaceChildren(...(keep ? [h('option', { value: 'keep', text: 'Keep each build’s lane' })] : []), ...LANES.map(([v, t]) => h('option', { value: v, text: sel.id === 'mockLane' && !v ? 'None reported' : t })));
+  }
+  $('#mockLane').value = (mock && mock.lane) || '';
 }
 
 function renderBuildList() {
@@ -105,9 +115,9 @@ function renderBuildList() {
   const ul = $('#buildList');
   ul.replaceChildren(...list.map((b) => {
     const li = h('li', { class: cur && cur.id === b.id ? 'sel' : '', onclick: () => selectBuild(b.id) },
-      selections[norm(b.champion)] === b.id ? h('span', { class: 'badge', text: 'In overlay' }) : null,
+      inOverlay(b) ? h('span', { class: 'badge', text: 'In overlay' }) : null,
       h('div', { class: 'n', text: b.name }),
-      h('div', { class: 'm', text: b.champion + ' · ' + b.steps.length + ' steps' }));
+      h('div', { class: 'm' }, b.champion + ' · ', b.lane ? h('span', { class: 'lane', text: laneLabel(b.lane) + ' · ' }) : null, b.steps.length + ' steps'));
     return li;
   }));
   if (!list.length) ul.append(h('li', { class: 'empty small', text: 'No builds yet.' }));
@@ -141,6 +151,7 @@ function renderEditor() {
   if (!cur) return;
   $('#buildName').value = cur.name;
   $('#buildChamp').value = cur.champion;
+  $('#buildLane').value = cur.lane || '';
   $('#buildNotes').value = cur.notes || '';
   const c = champions.find((x) => x.name === cur.champion);
   const img = $('#champIcon');
@@ -219,6 +230,44 @@ const save = async () => {
 const debouncedSave = debounce(() => save().catch((e) => { $('#saveState').textContent = 'Save failed'; console.error(e); }), 500);
 function scheduleSave() { $('#saveState').textContent = 'Saving…'; debouncedSave(); }
 
+// ---------- duplicate to other champions / lanes ----------
+const dupPick = new Set();
+function openDuplicate() {
+  if (!cur) return;
+  dupPick.clear();
+  $('#dupName').textContent = cur.name;
+  $('#dupSearch').value = '';
+  $('#dupLane').value = 'keep';
+  renderDupList();
+  $('#dupDialog').showModal();
+}
+function renderDupList() {
+  const q = norm($('#dupSearch').value);
+  $('#dupList').replaceChildren(...champions.filter((c) => !q || norm(c.name).includes(q)).map((c) => {
+    const box = h('input', { type: 'checkbox', checked: dupPick.has(c.name) });
+    box.onchange = () => { box.checked ? dupPick.add(c.name) : dupPick.delete(c.name); $('#dupCount').textContent = dupPick.size + ' selected'; };
+    return h('label', {}, box, c.name + (c.name === cur.champion ? ' (this one)' : ''));
+  }));
+  $('#dupCount').textContent = dupPick.size + ' selected';
+}
+async function duplicateBuild() {
+  if (!cur || !dupPick.size) { $('#dupCount').textContent = 'Pick at least one champion.'; return; }
+  await save();   // include any edits still waiting to save
+  const lane = $('#dupLane').value === 'keep' ? (cur.lane || '') : $('#dupLane').value;
+  let n = 0, first = null;
+  for (const champion of [...dupPick]) {
+    const same = norm(champion) === norm(cur.champion) && lane === (cur.lane || '');
+    const id = 'build-' + Date.now().toString(36) + (n++).toString(36);
+    const b = await api('/api/builds/' + id, 'PUT', { name: cur.name + (same ? ' (copy)' : ''), champion, lane, notes: cur.notes || '',
+      steps: cur.steps.map((s) => ({ itemId: s.itemId, count: s.count, note: s.note || '' })) });
+    builds.push(b);
+    first = first || b;
+  }
+  $('#dupDialog').close();
+  renderBuildList();
+  $('#saveState').textContent = 'Copied to ' + n + (n === 1 ? ' champion ✓' : ' champions ✓');
+}
+
 // ---------- item catalog ----------
 function filterItems() {
   const q = $('#search').value.trim().toLowerCase();
@@ -275,6 +324,7 @@ const pushMock = debounce(() => api('/api/mock', 'PUT', mock).catch(console.erro
 function renderMock() {
   $('#mockEnabled').checked = mock.enabled;
   $('#mockChamp').value = mock.champion;
+  $('#mockLane').value = mock.lane || '';
   $('#mockGold').value = mock.gold;
   $('#mockGoldRange').value = Math.min(6000, mock.gold);
   $('#mockTime').value = mock.gameTime;
@@ -292,6 +342,7 @@ function renderReadout() {
   const out = $('#mockReadout');
   if (!s || !s.connected) { out.textContent = 'No game data.'; return; }
   const lines = [`Champion: ${s.champion}   Gold: ${s.gold}   Mode: ${s.mode}${s.autoShop ? '   (shop-ready)' : ''}`];
+  lines.push('Lane: ' + (s.laneLabel ? s.laneLabel + (s.laneSource === 'manual' ? ' (picked by hand)' : ' (from the game)') : 'not reported' + (s.laneOptions && s.laneOptions.length > 1 ? ' (press F7 to switch)' : '')));
   if (!s.build) lines.push('Build: none for this champion — create one on the Builds tab.');
   else if (s.eval) {
     const e = s.eval;
@@ -312,6 +363,7 @@ function wireMock() {
   const set = (patch) => { Object.assign(mock, patch); renderMock(); pushMock(); };
   $('#mockEnabled').onchange = (e) => set({ enabled: e.target.checked });
   $('#mockChamp').onchange = (e) => set({ champion: e.target.value });
+  $('#mockLane').onchange = (e) => set({ lane: e.target.value });
   $('#mockGold').oninput = (e) => set({ gold: Number(e.target.value) || 0 });
   $('#mockGoldRange').oninput = (e) => set({ gold: Number(e.target.value) });
   $('#mockTime').oninput = (e) => set({ gameTime: Number(e.target.value) || 0 });
@@ -339,7 +391,7 @@ function connectStream() {
     box.className = 'status' + (live.connected ? (live.mock ? ' sim' : ' live') : '');
     $('#statusText').textContent = !live.connected ? 'Waiting for a match…'
       : live.mock ? 'Simulated game · ' + live.champion
-      : 'In game · ' + live.champion + ' (' + live.mode + ')';
+      : 'In game · ' + live.champion + ' (' + live.mode + ')' + (live.laneLabel ? ' · ' + live.laneLabel : '');
     renderReadout();
   };
 }
@@ -377,6 +429,11 @@ async function init() {
   $('#search').oninput = renderGrid;
   $('#buildName').oninput = (e) => { cur.name = e.target.value; scheduleSave(); };
   $('#buildNotes').oninput = (e) => { cur.notes = e.target.value; scheduleSave(); };
+  $('#buildLane').onchange = (e) => { cur.lane = e.target.value; scheduleSave(); renderBuildList(); };
+  $('#dupBuild').onclick = () => openDuplicate();
+  $('#dupSearch').oninput = renderDupList;
+  $('#dupCancel').onclick = () => $('#dupDialog').close();
+  $('#dupGo').onclick = () => duplicateBuild().catch((e) => { $('#dupCount').textContent = 'Failed: ' + e.message; });
   $('#buildChamp').onchange = (e) => {
     cur.champion = e.target.value;
     const c = champions.find((x) => x.name === cur.champion);
@@ -385,7 +442,7 @@ async function init() {
   };
   $('#useBuild').onclick = async () => {
     await save();
-    await api('/api/select', 'POST', { champion: cur.champion, buildId: cur.id });
+    await api('/api/select', 'POST', { champion: cur.champion, lane: cur.lane || '', buildId: cur.id });
     selections = await api('/api/selections');
     renderBuildList();
     $('#saveState').textContent = 'In overlay ✓';

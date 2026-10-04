@@ -47,6 +47,8 @@
 - **Recipe-aware** — counts owned components toward a bigger item (the shop deducts them), never counts one component twice, and suggests the best component you can afford right now when you can't afford the whole item.
 - **Multi-stat item filter** — toggle several stats and choose *Match all* or *Match any*; combine with Consumables, Boots, Basic, Epic and Legendary.
 - **Optimizer tab** — six sliders (Magic EHP, Armor EHP, DPS with crit, DPS without crit, Ability Power, Cooldown Reduction) say what you want; Jade searches every legal 3-6 item build with a multi-objective genetic algorithm, ranks the best for your mix, and saves any result as a build. Runs in your browser, no server needed.
+- **Lane builds** — give the same champion a different build per lane (Top, Jungle, Mid, Bot, Support). The overlay shows the one for your lane and falls back to your any-lane build.
+- **Duplicate builds** — copy a build to other champions, or to another lane of the same champion, in one step.
 - **Item tooltips and recipes** — hover any item for its description, cost, combine cost, and what it builds from and into.
 - **Drag-and-drop build order** with counts (for example 2× Total Biscuit) and per-step notes. Builds autosave as plain JSON files.
 - **Shop mode click-to-copy** — when you're at the shop, click an item in the overlay to copy its name, then paste it in the shop search.
@@ -96,6 +98,7 @@ Change any of these in `config.json` (in your builds/settings folder, created on
 | `F8` | Toggle manual **shop mode** (makes the overlay cards clickable) |
 | `F9` | **Calibrate**: `Alt`+Arrows moves the strip, `Alt`+`Shift`+Arrows resizes it, `F9` again saves |
 | `F10` | Show / hide the overlay |
+| `F7` | Switch to the next lane build for your champion |
 | `Ctrl`+`Alt`+`Q` | Quit |
 
 ## How the overlay works
@@ -130,6 +133,9 @@ The web app runs anywhere Node runs. The overlay is built and set up for Windows
 
 **Where are my builds saved?**
 As one JSON file per build, so they're easy to back up or share. With the installer or portable app they're in `%APPDATA%\jade-overlay\builds` (tray menu, *Open builds folder*). Running from source, they're in the project's `builds/` folder.
+
+**How does Jade know my lane?**
+It reads the `position` field from the Live Client Data API and treats a Smite spell as jungle. In the League Classic match I captured, the game reported no position, so when the lane isn't reported you pick it by hand: press `F7`, click the lane tag in the overlay, or use the tray menu. Jade remembers your last pick for each champion.
 
 **Can I use it for the regular Summoner's Rift game?**
 Jade targets League Classic. In other modes the overlay tells you it isn't League Classic.
